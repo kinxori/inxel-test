@@ -70,14 +70,12 @@ function InxelTest() {
   const sortedCompanyArray = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <article style={{ display: "flex", borderRadius: "10px", border: "1px solid white" }}>
+    <article className="flex flex-col rounded-[10px] border border-solid border-white       ">
       <div
-        style={{
-          width: "200px",
-          height: "300px",
-          boxSizing: "border-box",
-          padding: "10px",
-        }}
+        className="
+        box-border
+        p-[10px]
+        "
       >
         <form style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
           <input
@@ -86,7 +84,11 @@ function InxelTest() {
             onChange={handleChange}
             placeholder="name"
             type="text"
-            style={{ height: "40px", borderRadius: "10px", border: "none", paddingLeft: "5px" }}
+            className="
+            h-[40px]
+            rounded-[10px]
+            pl-[10px]
+            "
           ></input>
           <input
             name="number"
@@ -94,65 +96,57 @@ function InxelTest() {
             onChange={handleChange}
             placeholder="number"
             type="text"
-            style={{ height: "40px", borderRadius: "10px", border: "none", paddingLeft: "5px" }}
+            className="
+            h-[40px]
+            rounded-[10px]
+            pl-[10px]
+            "
           ></input>
           <select
             name="type"
             value={inputForm.type}
             onChange={handleChange}
-            style={{ height: "40px", borderRadius: "10px", border: "none", paddingLeft: "2px" }}
+            className="
+            h-[40px]
+            rounded-[10px]
+            pl-[5px]
+            "
           >
             <option value="person">Person</option>
             <option value="company">Company</option>
           </select>
-          <button
-            style={{ background: "white", color: "black" }}
-            onClick={handleSubmit}
-            type="submit"
-          >
+          <button className="bg-white text-black" onClick={handleSubmit} type="submit">
             Add
           </button>
         </form>
       </div>
       <hr></hr>
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "400px",
-          height: "300px",
-          boxSizing: "border-box",
-          padding: "10px",
-        }}
+        className="
+        h-[300px]
+        box-border
+        p-[10px]
+        flex
+        flex-col
+        overflow-auto
+        "
       >
-        <div style={{ display: "flex", gap: "10px" }}>
+        <div className=" flex gap-[5px] h-[40px] justify-around   ">
           <button
-            style={
-              typeDisplay === "person"
-                ? { background: "white", color: "black" }
-                : { background: "black" }
-            }
+            className={typeDisplay === "person" ? " bg-white text-black " : "bg-black"}
             onClick={() => setTypeDisplay("person")}
           >
             Person
           </button>
           <button
-            style={
-              typeDisplay === "company"
-                ? { background: "white", color: "black" }
-                : { background: "black" }
-            }
+            className={typeDisplay === "company" ? " bg-white text-black " : "bg-black"}
             onClick={() => setTypeDisplay("company")}
           >
             Company
           </button>
           <button
             onClick={handleAlphabetic}
-            style={
-              isSorted
-                ? { marginLeft: "auto", background: "white", color: "black" }
-                : { marginLeft: "auto", background: "black" }
-            }
+            className={isSorted ? " bg-white text-black " : " text-white bg-black "}
           >
             A-Z
           </button>
