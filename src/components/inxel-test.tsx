@@ -89,7 +89,7 @@ function InxelTest() {
         p-[10px]
         "
       >
-        <form style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+        <form className="flex flex-col gap-[5px]   ">
           <input
             required={true}
             autoComplete="off"
@@ -144,7 +144,6 @@ function InxelTest() {
           </button>
         </form>
       </div>
-      <hr></hr>
       <div
         className="
         h-[300px]
@@ -153,9 +152,11 @@ function InxelTest() {
         flex
         flex-col
         overflow-auto
+        gap-[20px]
+       
         "
       >
-        <div className=" flex gap-[5px] h-[40px] justify-around   ">
+        <div className=" flex gap-[5px] h-[40px] justify-around  ">
           <button
             className={typeDisplay === "person" ? " bg-black text-white " : "bg-white text-black"}
             onClick={() => setTypeDisplay("person")}
@@ -175,8 +176,7 @@ function InxelTest() {
             A-Z
           </button>
         </div>
-        <hr style={{ margin: "10px 0" }}></hr>
-        <div style={{ display: "flex", flexDirection: "column", gap: "5px", overflowY: "auto" }}>
+        <div className="flex flex-col gap-[5px] overflowY-auto      ">
           {typeDisplay === "person" ? (
             <>
               {isSorted
