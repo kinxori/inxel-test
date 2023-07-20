@@ -1,6 +1,41 @@
 import InxelTest from "./components/inxel-test";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import {
+  atomOneDark,
+  darcula,
+  dark,
+  docco,
+  dracula,
+} from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export default function App() {
+  const snippet1 = `  
+  {*  Basic HTML structure *}
+
+  <article>
+    <div>
+      <form>
+        <input></input>
+        <input></input>
+        <select>
+          <option>Person</option>
+          <option>Company</option>
+        </select>
+        <button> Add </button>
+      </form>
+    </div>
+    <div>
+      <div>
+        <button> Person </button>
+        <button> Company </button>
+        <button> A-Z </button>
+      </div>
+      <div> <Card Component> </div>
+    </div>
+  </article>
+  
+`;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className="">
@@ -25,6 +60,14 @@ export default function App() {
         <h3 className=" leading-[16px] font-bold   ">Step #1:</h3>
         <br></br>
         <p>The first step was to make the whole structure in HTML.</p>
+        <br></br>
+        <SyntaxHighlighter
+          language="jsx"
+          style={dracula}
+          className="rounded-[10px] overflow-hidden "
+        >
+          {snippet1}
+        </SyntaxHighlighter>
       </div>
     </article>
   );
