@@ -9,10 +9,13 @@ export default function App() {
         <br></br>
         <p className="font-sans leading-[18px]    ">
           Here you can have a look on 1 technical challenge I complete for Inxel. You can have a
-          step by step through the whole process I did.
+          clear step by step view through the whole process.
         </p>
       </div>
       <InxelTest />
+      <div>
+        <h3 className=" leading-[16px] font-bold   ">But... How does it work?</h3>
+      </div>
     </article>
   );
 }

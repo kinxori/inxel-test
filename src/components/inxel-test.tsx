@@ -40,7 +40,7 @@ function InxelTest() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const newEntry = { ...inputForm };
-    if (inputForm.name || inputForm.number !== "") {
+    if (inputForm.name && inputForm.number !== "") {
       setData((prevData) => [...prevData, newEntry]);
       setInputData({
         name: "",
@@ -91,6 +91,8 @@ function InxelTest() {
       >
         <form style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
           <input
+            required={true}
+            autoComplete="off"
             name="name"
             value={inputForm.name}
             onChange={handleChange}
@@ -105,6 +107,7 @@ function InxelTest() {
             "
           ></input>
           <input
+            required
             name="number"
             value={inputForm.number}
             onChange={handleChange}
@@ -116,7 +119,6 @@ function InxelTest() {
             pl-[10px]
             bg-black
             placeholder:text-[rgba(250,250,250,.2)]
-            
             "
           ></input>
           <select
