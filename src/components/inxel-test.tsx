@@ -11,23 +11,23 @@ function InxelTest() {
   });
   const [data, setData] = useState([
     {
-      name: "Juan",
-      number: "1209312",
+      name: "John",
+      number: "25937",
       type: "person",
     },
     {
-      name: "Pedro",
-      number: "901031",
+      name: "Peter",
+      number: "29745",
       type: "person",
     },
     {
-      name: "Ricardo",
+      name: "Richard",
       number: "82832",
       type: "company",
     },
     {
-      name: "Fernando",
-      number: "1291203",
+      name: "Fer",
+      number: "32195",
       type: "company",
     },
   ]);
@@ -135,7 +135,11 @@ function InxelTest() {
             <option value="person">Person</option>
             <option value="company">Company</option>
           </select>
-          <button className="bg-black text-white" onClick={handleSubmit} type="submit">
+          <button
+            className="bg-white text-black  border-[2px] border-solid border-black  "
+            onClick={handleSubmit}
+            type="submit"
+          >
             Add
           </button>
         </form>
