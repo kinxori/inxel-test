@@ -25,6 +25,24 @@ export default function App() {
         <h3 className=" leading-[16px] font-bold   ">Step #1:</h3>
         <br></br>
         <p>The first step was to make the whole structure in HTML.</p>
+        <div className="overflow-hidden w-[10%]    ">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="html"
+            data-slug-hash="xxaPQey"
+            data-user="kinxori"
+            style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          >
+            <span>
+              See the Pen <a href="https://codepen.io/kinxori/pen/xxaPQey">practica 1</a> by kinxori
+              (<a href="https://codepen.io/kinxori">@kinxori</a>) on{" "}
+              <a href="https://codepen.io">CodePen</a>.
+            </span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </div>
       </div>
     </article>
   );
