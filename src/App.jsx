@@ -3,12 +3,35 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [typeDisplay, setTypeDisplay] = useState("person");
+  const [isSorted, setIsSorted] = useState(false);
   const [inputForm, setInputData] = useState({
     name: "",
     number: "",
-    type: "Person",
+    type: "person",
   });
-  const [data, setData] = useState([{}]);
+  const [data, setData] = useState([
+    {
+      name: "Juan",
+      number: "1209312",
+      type: "person",
+    },
+    {
+      name: "Pedro",
+      number: "901031",
+      type: "person",
+    },
+    {
+      name: "Ricardo",
+      number: "82832",
+      type: "company",
+    },
+    {
+      name: "Fernando",
+      number: "1291203",
+      type: "company",
+    },
+  ]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -18,34 +41,58 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const newEntry = { ...inputForm };
-    setData((prevData) => [...prevData, newEntry]);
-    setInputData({
-      name: "",
-      number: "",
-      type: "Person",
-    });
+    if (inputForm.name || inputForm.number !== "") {
+      setData((prevData) => [...prevData, newEntry]);
+      setInputData({
+        name: "",
+        number: "",
+        type: "person",
+      });
+    } else null;
   };
 
-  const filteredPerson = data.filter((p) => {
-    p.type === "person";
+  const handleDelete = (id) => {
+    setData((prevData) => prevData.filter((card) => card.number !== id));
+  };
+
+  const handleAlphabetic = () => {
+    setIsSorted(!isSorted);
+  };
+
+  const filteredPerson = data.filter((item) => {
+    return item.type === "person";
   });
-  const filteredCompany = data.filter((p) => {
-    p.type === "company";
+  const filteredCompany = data.filter((item) => {
+    return item.type === "company";
   });
 
-  console.log("input", inputForm);
-  console.log("data", data);
+  const sortedPersonArray = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+
+  const sortedCompanyArray = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
+
+  // console.log("input", inputForm);
+  // console.log("data", data);
+  // console.log("person filter", filteredPerson);
+  // console.log("company filter", filteredCompany);
 
   return (
-    <article style={{ display: "flex" }}>
-      <div>
-        <form style={{ display: "flex", flexDirection: "column" }}>
+    <article style={{ display: "flex", borderRadius: "10px", border: "1px solid white" }}>
+      <div
+        style={{
+          width: "200px",
+          height: "300px",
+          boxSizing: "border-box",
+          padding: "10px",
+        }}
+      >
+        <form style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
           <input
             name="name"
             value={inputForm.name}
             onChange={handleChange}
             placeholder="name"
             type="text"
+            style={{ height: "40px", borderRadius: "10px", border: "none", paddingLeft: "5px" }}
           ></input>
           <input
             name="number"
@@ -53,28 +100,100 @@ function App() {
             onChange={handleChange}
             placeholder="number"
             type="text"
+            style={{ height: "40px", borderRadius: "10px", border: "none", paddingLeft: "5px" }}
           ></input>
-          <select name="type" value={inputForm.type} onChange={handleChange}>
+          <select
+            name="type"
+            value={inputForm.type}
+            onChange={handleChange}
+            style={{ height: "40px", borderRadius: "10px", border: "none", paddingLeft: "2px" }}
+          >
             <option value="person">Person</option>
             <option value="company">Company</option>
           </select>
-          <button onClick={handleSubmit} type="submit">
+          <button
+            style={{ background: "white", color: "black" }}
+            onClick={handleSubmit}
+            type="submit"
+          >
             Add
           </button>
         </form>
       </div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <div>
-          <button>Person</button>
-          <button>Company</button>
-          <button>A-Z</button>
+      <hr></hr>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "400px",
+          height: "300px",
+          boxSizing: "border-box",
+          padding: "10px",
+        }}
+      >
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button
+            style={
+              typeDisplay === "person"
+                ? { background: "white", color: "black" }
+                : { background: "black" }
+            }
+            onClick={() => setTypeDisplay("person")}
+          >
+            Person
+          </button>
+          <button
+            style={
+              typeDisplay === "company"
+                ? { background: "white", color: "black" }
+                : { background: "black" }
+            }
+            onClick={() => setTypeDisplay("company")}
+          >
+            Company
+          </button>
+          <button
+            onClick={handleAlphabetic}
+            style={
+              isSorted
+                ? { marginLeft: "auto", background: "white", color: "black" }
+                : { marginLeft: "auto", background: "black" }
+            }
+          >
+            A-Z
+          </button>
         </div>
-        <div>
-          {filteredPerson.map((p) => (
+        <hr style={{ margin: "10px 0" }}></hr>
+        <div style={{ display: "flex", flexDirection: "column", gap: "5px", overflowY: "auto" }}>
+          {typeDisplay === "person" ? (
             <>
-              <Card name={p.name} number={p.number} />
+              {isSorted
+                ? sortedPersonArray.map((c) => (
+                    <div key={c.number}>
+                      <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+                    </div>
+                  ))
+                : filteredPerson.map((c) => (
+                    <div key={c.number}>
+                      <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+                    </div>
+                  ))}
             </>
-          ))}
+          ) : (
+            <>
+              {isSorted
+                ? sortedCompanyArray.map((c) => (
+                    <div key={c.number}>
+                      <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+                    </div>
+                  ))
+                : filteredCompany.map((c) => (
+                    <div key={c.number}>
+                      <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+                    </div>
+                  ))}
+            </>
+          )}
         </div>
       </div>
     </article>
@@ -92,14 +211,24 @@ function Card(props) {
         background: "black",
         display: "flex",
         flexDirection: "row",
+        borderRadius: "10px",
       }}
     >
-      <div width={{ width: "70%" }}>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "10px",
+          margin: "0 20px",
+        }}
+      >
         <h3>{props.name}</h3>
         <h3>{props.number}</h3>
-      </div>
-      <div width={{ width: "30%" }}>
-        <button>Delete</button>
+        <button onClick={() => props.handleDelete(props.number)} style={{ marginLeft: "auto" }}>
+          Delete
+        </button>
       </div>
     </div>
   );
