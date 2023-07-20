@@ -2,7 +2,7 @@ import InxelTest from "./components/inxel-test";
 
 export default function App() {
   return (
-    <article className="w-[80%] mx-auto my-10 overflow-hidden font-[Rubik] ">
+    <article className="w-[80%] mx-auto my-10  font-[Rubik] ">
       <div className="">
         <h1 className=" text-[54px] font-bold    ">Hey There!</h1>
         <h3 className=" leading-[16px] font-bold     ">Welcome to this repository. </h3>

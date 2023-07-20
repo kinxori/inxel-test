@@ -70,7 +70,19 @@ function InxelTest() {
   const sortedCompanyArray = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <article className="flex flex-col rounded-[10px] border border-solid border-white       ">
+    <article
+      className="flex 
+    flex-col 
+    rounded-[10px] 
+    border-[3px] 
+    border-solid
+    border-black 
+    my-10
+    bg-white
+    overflow-hidden
+    drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] 
+    "
+    >
       <div
         className="
         box-border
@@ -88,6 +100,8 @@ function InxelTest() {
             h-[40px]
             rounded-[10px]
             pl-[10px]
+            bg-black
+            placeholder:text-[rgba(250,250,250,.2)]
             "
           ></input>
           <input
@@ -100,6 +114,9 @@ function InxelTest() {
             h-[40px]
             rounded-[10px]
             pl-[10px]
+            bg-black
+            placeholder:text-[rgba(250,250,250,.2)]
+            
             "
           ></input>
           <select
@@ -110,12 +127,13 @@ function InxelTest() {
             h-[40px]
             rounded-[10px]
             pl-[5px]
+            bg-black
             "
           >
             <option value="person">Person</option>
             <option value="company">Company</option>
           </select>
-          <button className="bg-white text-black" onClick={handleSubmit} type="submit">
+          <button className="bg-black text-white" onClick={handleSubmit} type="submit">
             Add
           </button>
         </form>
@@ -133,20 +151,20 @@ function InxelTest() {
       >
         <div className=" flex gap-[5px] h-[40px] justify-around   ">
           <button
-            className={typeDisplay === "person" ? " bg-white text-black " : "bg-black"}
+            className={typeDisplay === "person" ? " bg-black text-white " : "bg-white text-black"}
             onClick={() => setTypeDisplay("person")}
           >
             Person
           </button>
           <button
-            className={typeDisplay === "company" ? " bg-white text-black " : "bg-black"}
+            className={typeDisplay === "company" ? " bg-black text-white " : "bg-white text-black"}
             onClick={() => setTypeDisplay("company")}
           >
             Company
           </button>
           <button
             onClick={handleAlphabetic}
-            className={isSorted ? " bg-white text-black " : " text-white bg-black "}
+            className={isSorted ? " bg-black text-white  " : " bg-white text-black "}
           >
             A-Z
           </button>
@@ -193,28 +211,34 @@ export default InxelTest;
 function Card(props) {
   return (
     <div
-      style={{
-        width: "100%",
-        height: "50px",
-        background: "black",
-        display: "flex",
-        flexDirection: "row",
-        borderRadius: "10px",
-      }}
+      className="
+ 
+      h-[60px]
+      bg-black
+      flex
+      rounded-[10px]
+      "
     >
       <div
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "10px",
-          margin: "0 20px",
-        }}
+        className="
+        w-[100%]
+     flex
+     justify-center
+     items-center
+     gap-[10px]
+     mx-[10px]
+        "
       >
         <h3>{props.name}</h3>
-        <h3>{props.number}</h3>
-        <button onClick={() => props.handleDelete(props.number)} style={{ marginLeft: "auto" }}>
+        <h3>+ {props.number}</h3>
+        <button
+          onClick={() => props.handleDelete(props.number)}
+          className="
+        ml-auto
+        bg-white
+        text-black
+        "
+        >
           Delete
         </button>
       </div>
