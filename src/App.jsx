@@ -384,6 +384,11 @@ export default function App() {
             {snippet12}
           </SyntaxHighlighter>
         </div>
+        <br></br>
+        <p>
+          Great! Now we have to send the data entries to the "inputForm" variable we create in the
+          "useState".{" "}
+        </p>
       </div>
     </article>
   );
