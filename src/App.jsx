@@ -37,14 +37,26 @@ export default function App() {
 `;
 
   const snippet2 = `
-    <input 
-      type="text" 
-      value={null} 
-      placeholder="Insert your name" 
-      name="name" 
-      onChange={null}
-    >
-    </input>
+  <input 
+    type="text" 
+    value={null} 
+    placeholder="Insert your name" 
+    name="name" 
+    onChange={null}
+  >
+  </input>
+
+`;
+
+  const snippet3 = `
+  <select
+    name="type"
+    value={inputForm.type}
+    onChange={handleChange}
+  >
+      <option value="person">Person</option>
+      <option value="company">Company</option>
+  </select>
 
 `;
 
@@ -88,6 +100,11 @@ export default function App() {
         <br></br>
         <p>Here we add the attributes each tag will have in order to work as planned.</p>
         <br></br>
+        <p>
+          We add the "name" attribute as an identifier. Then we add the "value and onChange" with "
+          {}" so they can receive dynamic values or functions.
+        </p>
+        <br></br>
         <p>This is how the input tag should look like:</p>
         <br></br>
         <SyntaxHighlighter
@@ -97,6 +114,17 @@ export default function App() {
         >
           {snippet2}
         </SyntaxHighlighter>
+        <br></br>
+        <p>Then we add the similar attributes to "option and select" tags:</p>
+        <br></br>
+        <SyntaxHighlighter
+          language="jsx"
+          style={dracula}
+          className="rounded-[10px] overflow-hidden "
+        >
+          {snippet3}
+        </SyntaxHighlighter>
+        <br></br>
       </div>
     </article>
   );
