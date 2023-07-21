@@ -39,6 +39,14 @@ export default function App() {
     onChange={null}
   >
   </input>
+  <input 
+    type="number" 
+    value={null} 
+    placeholder="Insert your name" 
+    name="number" 
+    onChange={null}
+  >
+  </input>
 
 `;
 
@@ -71,6 +79,7 @@ export default function App() {
   <button className={null} onClick={null}>
     A-Z
   </button>
+
 `;
 
   const snippet6 = `
@@ -116,6 +125,11 @@ export default function App() {
   
 `;
 
+  const snippet9 = `
+const handleChange = (event) => {}; // We receive the event
+
+`;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className="">
@@ -144,13 +158,14 @@ export default function App() {
           proper name would be JSX .
         </p>
         <br></br>
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] "
-        >
-          {snippet1}
-        </SyntaxHighlighter>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 1</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet1}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
         <h3 className=" leading-[16px] font-bold ">Step #2</h3>
         <br></br>
@@ -163,36 +178,40 @@ export default function App() {
         <br></br>
         <p>This is how the input tag should look like:</p>
         <br></br>
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
-        >
-          {snippet2}
-        </SyntaxHighlighter>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 2</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet2}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
         <p>Then we add the similar attributes to "option and select" tags:</p>
         <br></br>
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
-        >
-          {snippet3}
-        </SyntaxHighlighter>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 3</i>
+          </div>
+
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet3}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
         <p>
           The last tag we are missing here is the Button to submit the data collected. We need to
           add the "type=submit" and the "onClick=&#123;&#125;" to execute something when is clicked.
         </p>
         <br></br>
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
-        >
-          {snippet4}
-        </SyntaxHighlighter>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 4</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet4}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
         <p>
           After that we keep adding attributes now to the buttons that are going to toggle the
@@ -203,13 +222,14 @@ export default function App() {
           We add the "&#123; &#125;" to the className because we need to make the styles dynamic:
         </p>
         <br></br>
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
-        >
-          {snippet5}
-        </SyntaxHighlighter>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 5</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet5}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
         <h3 className=" leading-[16px] font-bold ">Step #3</h3>
         <br></br>
@@ -220,13 +240,14 @@ export default function App() {
           API to download real users) and store them in the same useState.
         </p>
         <br></br>
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
-        >
-          {snippet6}
-        </SyntaxHighlighter>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 6</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet6}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
         <p>As you can see, we only have 3 values per object:</p>
         <br></br>
@@ -247,13 +268,14 @@ export default function App() {
           filled. This is because "person" will be the default value.
         </p>
         <br></br>
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
-        >
-          {snippet7}
-        </SyntaxHighlighter>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 7</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet7}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
         <p>
           For now, we will have 2 main functions. 1 that handles the entry in the Input and Select
@@ -265,13 +287,14 @@ export default function App() {
           with the Select and Option Tags.
         </p>
         <br></br>
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
-        >
-          {snippet8}
-        </SyntaxHighlighter>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 8</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet8}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
         <p>Let's break it down:</p>
         <br></br>
@@ -280,6 +303,22 @@ export default function App() {
           <li>We "extract" the name and the value from the event.target</li>
           <li>We "send" the receive data to the empty variable we create in the useState.</li>
         </ul>
+        <br></br>
+        <p>Point #1:</p>
+        <br></br>
+        <p>
+          As for any onChange attribute, we are going to receive an event, that event is going to be
+          passed in the function to use it.
+        </p>
+        <br></br>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 9</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet9}
+          </SyntaxHighlighter>
+        </div>
         <br></br>
       </div>
     </article>

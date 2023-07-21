@@ -75,7 +75,6 @@ function InxelTest() {
     flex-col 
     rounded-[10px] 
     border-[3px] 
-    border-solid
     border-black 
     my-10
     bg-white
