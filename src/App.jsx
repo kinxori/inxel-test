@@ -141,7 +141,14 @@ export default function App() {
 `;
 
   const snippet12 = `
-  const { name, value } = event.target;
+  // This is the same as...
+
+  const { name, value } = event.target; 
+
+  //...as this, but deconstructed
+
+  const name = event.target.name;
+  const value = event.target.value;
 
 `;
 
@@ -342,10 +349,25 @@ export default function App() {
         <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-            <i className="text-black  ">Snippet 9</i>
+            <i className="text-black  ">Snippet 10</i>
           </div>
           <SyntaxHighlighter language="jsx" style={dracula}>
-            {snippet9}
+            {snippet10}
+          </SyntaxHighlighter>
+        </div>
+        <br></br>
+        <p>
+          For the value it could be a little tricky because we added a "value" attribute to Input,
+          Select and Option Tags, but we are going to extract the "value" from Input and Select Tags
+          only. You will get it soon!
+        </p>
+        <br></br>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 11</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet11}
           </SyntaxHighlighter>
         </div>
       </div>
