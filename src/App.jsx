@@ -152,6 +152,26 @@ export default function App() {
 
 `;
 
+  const snippet13 = `
+  setInputData({ ...inputForm, [name]: value });
+
+`;
+
+  const snippet14 = `
+  // What ever it's in here...
+
+  { ...inputForm } 
+
+  // We will add this
+
+  [name]: value 
+
+  // Update the varible content calling it's function from the useState
+
+  setInputForm()
+
+`;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className="">
@@ -386,9 +406,63 @@ export default function App() {
         </div>
         <br></br>
         <p>
-          Great! Now we have to send the data entries to the "inputForm" variable we create in the
-          "useState".{" "}
+          Great! Now we have to send the data entries to the "inputForm" variable we created in the
+          "useState".
         </p>
+        <br></br>
+        <p>
+          For this we need to call the function "setInputForm" and with the spread operator state
+          that what ever it's already in there, we are going to add the entry data from the Input
+          and Select Tags.
+        </p>
+        <br></br>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 13</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet13}
+          </SyntaxHighlighter>
+        </div>
+        <br></br>
+        <p>Again, let's break it down:</p>
+        <br></br>
+        <p>After using the Spread Operator, we have to state what we want to add.</p>
+        <br></br>
+        <p>Check it out:</p>
+        <br></br>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 14</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet14}
+          </SyntaxHighlighter>
+        </div>
+        <br></br>
+        <p>Now, what's that weird syntaxis of "[name]: value"?</p>
+        <br></br>
+        <p>Do you remember we added the "name" attribute to each Input and Select Tag? </p>
+        <br></br>
+        <p>Do you remember we were going to make them dynamic?</p>
+        <br></br>
+        <p>
+          Well, as we are basically receiving/listening each one of those attributes, we can call it
+          an Array
+        </p>
+        <br></br>
+        <p>
+          And as we are saying that each one of those "name" elements has a value, we add the value
+          to each one.
+        </p>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 15</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet14}
+          </SyntaxHighlighter>
+        </div>
       </div>
     </article>
   );
