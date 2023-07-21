@@ -108,6 +108,14 @@ export default function App() {
 
 `;
 
+  const snippet8 = `
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setInputData({ ...inputForm, [name]: value });
+  };
+  
+`;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className="">
@@ -248,9 +256,31 @@ export default function App() {
         </SyntaxHighlighter>
         <br></br>
         <p>
-          For now, we will have 2 main functions. 1 that handles the entry in the Input Tag. And 2,
-          the one that handles the Submit action.
+          For now, we will have 2 main functions. 1 that handles the entry in the Input and Select
+          Tags. And 2, the one that handles the Submit action.
         </p>
+        <br></br>
+        <p>
+          First, let's create "handleChange", this will control what happens with each Input Tag and
+          with the Select and Option Tags.
+        </p>
+        <br></br>
+        <SyntaxHighlighter
+          language="jsx"
+          style={dracula}
+          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
+        >
+          {snippet8}
+        </SyntaxHighlighter>
+        <br></br>
+        <p>Let's break it down:</p>
+        <br></br>
+        <ul className="list-decimal pl-[30px]">
+          <li>We receive an event</li>
+          <li>We "extract" the name and the value from the event.target</li>
+          <li>We "send" the receive data to the empty variable we create in the useState.</li>
+        </ul>
+        <br></br>
       </div>
     </article>
   );
