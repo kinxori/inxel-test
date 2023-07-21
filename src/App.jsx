@@ -108,7 +108,7 @@ export default function App() {
           {snippet1}
         </SyntaxHighlighter>
         <br></br>
-        <h3 className=" leading-[16px] font-bold   ">Step #2</h3>
+        <h3 className=" leading-[16px] font-bold ">Step #2</h3>
         <br></br>
         <p>Here we add the attributes each tag will have in order to work as planned.</p>
         <br></br>
@@ -153,6 +153,11 @@ export default function App() {
         >
           {snippet4}
         </SyntaxHighlighter>
+        <br></br>
+        <h3 className=" leading-[16px] font-bold ">Step #3</h3>
+        <br></br>
+        <p>At this point, we need to start creating the logic for this parent component.</p>
+        <br></br>
       </div>
     </article>
   );
