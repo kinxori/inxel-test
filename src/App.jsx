@@ -55,6 +55,13 @@ export default function App() {
 `;
 
   const snippet4 = `
+  <button onClick={null} type="submit">
+    Add
+  </button>
+
+`;
+
+  const snippet5 = `
   <button className={null} onClick={null}>
     Person
   </button>
@@ -66,7 +73,7 @@ export default function App() {
   </button>
 `;
 
-  const snippet5 = `
+  const snippet6 = `
   const [data, setData] = useState([
     {
       name: "John",
@@ -92,7 +99,7 @@ export default function App() {
 
 `;
 
-  const snippet6 = `
+  const snippet7 = `
   const [inputForm, setInputData] = useState({
     name: "",
     number: "",
@@ -167,6 +174,19 @@ export default function App() {
         </SyntaxHighlighter>
         <br></br>
         <p>
+          The last tag we are missing here is the Button to submit the data collected. We need to
+          add the "type=submit" and the "onClick=&#123;&#125;" to execute something when is clicked.
+        </p>
+        <br></br>
+        <SyntaxHighlighter
+          language="jsx"
+          style={dracula}
+          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
+        >
+          {snippet4}
+        </SyntaxHighlighter>
+        <br></br>
+        <p>
           After that we keep adding attributes now to the buttons that are going to toggle the
           "Person and Company" list, as well as the "A-Z" button.
         </p>
@@ -180,7 +200,7 @@ export default function App() {
           style={dracula}
           className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
         >
-          {snippet4}
+          {snippet5}
         </SyntaxHighlighter>
         <br></br>
         <h3 className=" leading-[16px] font-bold ">Step #3</h3>
@@ -197,7 +217,7 @@ export default function App() {
           style={dracula}
           className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
         >
-          {snippet5}
+          {snippet6}
         </SyntaxHighlighter>
         <br></br>
         <p>As you can see, we only have 3 values per object:</p>
@@ -224,7 +244,7 @@ export default function App() {
           style={dracula}
           className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
         >
-          {snippet6}
+          {snippet7}
         </SyntaxHighlighter>
         <br></br>
         <p>
