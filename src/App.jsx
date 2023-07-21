@@ -60,6 +60,18 @@ export default function App() {
 
 `;
 
+  const snippet4 = `
+  <button className={null} onClick={null}>
+    Person
+  </button>
+  <button className={null} onClick={null}>
+    Company
+  </button>
+  <button className={null} onClick={null}>
+    A-Z
+  </button>
+`;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className="">
@@ -101,8 +113,8 @@ export default function App() {
         <p>Here we add the attributes each tag will have in order to work as planned.</p>
         <br></br>
         <p>
-          We add the "name" attribute as an identifier. Then we add the "value and onChange" with "
-          {}" so they can receive dynamic values or functions.
+          We add the "name" attribute as an identifier. Then we add the "value and onChange" with
+          "&#123; &#125;" so they can receive dynamic values or functions.
         </p>
         <br></br>
         <p>This is how the input tag should look like:</p>
@@ -125,6 +137,22 @@ export default function App() {
           {snippet3}
         </SyntaxHighlighter>
         <br></br>
+        <p>
+          After that we keep adding attributes now to the buttons that are going to toggle the
+          "Person and Company" list, as well as the "A-Z" button.
+        </p>
+        <br></br>
+        <p>
+          We add the "&#123; &#125;" to the className because we need to make the styles dynamic:
+        </p>
+        <br></br>
+        <SyntaxHighlighter
+          language="jsx"
+          style={dracula}
+          className="rounded-[10px] overflow-hidden "
+        >
+          {snippet4}
+        </SyntaxHighlighter>
       </div>
     </article>
   );
