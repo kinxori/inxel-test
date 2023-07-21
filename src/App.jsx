@@ -370,6 +370,20 @@ export default function App() {
             {snippet11}
           </SyntaxHighlighter>
         </div>
+        <br></br>
+        <p>
+          Now if we apply some deconstruction, we can write the next lines because both "value" and
+          "name" come from "event.target".
+        </p>
+        <br></br>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 12</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet12}
+          </SyntaxHighlighter>
+        </div>
       </div>
     </article>
   );
