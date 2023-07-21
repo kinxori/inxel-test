@@ -226,6 +226,11 @@ export default function App() {
         >
           {snippet6}
         </SyntaxHighlighter>
+        <br></br>
+        <p>
+          For now, we will have 2 main functions. 1 that handles the entry in the Input Tag. And 2,
+          the one that handles the Submit action.
+        </p>
       </div>
     </article>
   );
