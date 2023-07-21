@@ -1,12 +1,6 @@
 import InxelTest from "./components/inxel-test";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import {
-  atomOneDark,
-  darcula,
-  dark,
-  docco,
-  dracula,
-} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export default function App() {
   const snippet1 = `  
@@ -70,6 +64,32 @@ export default function App() {
   <button className={null} onClick={null}>
     A-Z
   </button>
+`;
+
+  const snippet5 = `
+  const [data, setData] = useState([
+    {
+      name: "John",
+      number: "25937",
+      type: "person",
+    },
+    {
+      name: "Peter",
+      number: "29745",
+      type: "person",
+    },
+    {
+      name: "Richard",
+      number: "82832",
+      type: "company",
+    },
+    {
+      name: "Fer",
+      number: "32195",
+      type: "company",
+    },
+  ]);
+
 `;
 
   return (
@@ -158,6 +178,18 @@ export default function App() {
         <br></br>
         <p>At this point, we need to start creating the logic for this parent component.</p>
         <br></br>
+        <p>
+          First we create the useState that is going to have the hard-coded data (We can use any API
+          to download real users) and store them in the same useState.
+        </p>
+        <br></br>
+        <SyntaxHighlighter
+          language="jsx"
+          style={dracula}
+          className="rounded-[10px] overflow-hidden "
+        >
+          {snippet5}
+        </SyntaxHighlighter>
       </div>
     </article>
   );
