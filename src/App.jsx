@@ -190,6 +190,16 @@ export default function App() {
         >
           {snippet5}
         </SyntaxHighlighter>
+        <br></br>
+        <p>As you can see, we only have 3 values:</p>
+        <br></br>
+        <ul className="list-disc pl-[20px]">
+          <li>name</li>
+          <li>number</li>
+          <li>type</li>
+        </ul>
+        <br></br>
+        <p>This is because for the purpose of the exercise, we don't need more data.</p>
       </div>
     </article>
   );
