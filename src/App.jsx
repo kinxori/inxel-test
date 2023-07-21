@@ -33,7 +33,19 @@ export default function App() {
       <div> <Card Component> </div>
     </div>
   </article>
-  
+
+`;
+
+  const snippet2 = `
+    <input 
+      type="text" 
+      value={null} 
+      placeholder="Insert your name" 
+      name="name" 
+      onChange={null}
+    >
+    </input>
+
 `;
 
   return (
@@ -59,7 +71,10 @@ export default function App() {
         <br></br>
         <h3 className=" leading-[16px] font-bold   ">Step #1:</h3>
         <br></br>
-        <p>The first step was to make the whole structure in HTML.</p>
+        <p>
+          The first step was to make the whole structure in HTML. As we are working with React, the
+          proper name would be JSX .
+        </p>
         <br></br>
         <SyntaxHighlighter
           language="jsx"
@@ -67,6 +82,20 @@ export default function App() {
           className="rounded-[10px] overflow-hidden "
         >
           {snippet1}
+        </SyntaxHighlighter>
+        <br></br>
+        <h3 className=" leading-[16px] font-bold   ">Step #2</h3>
+        <br></br>
+        <p>Here we add the attributes each tag will have in order to work as planned.</p>
+        <br></br>
+        <p>This is how the input tag should look like:</p>
+        <br></br>
+        <SyntaxHighlighter
+          language="jsx"
+          style={dracula}
+          className="rounded-[10px] overflow-hidden "
+        >
+          {snippet2}
         </SyntaxHighlighter>
       </div>
     </article>
