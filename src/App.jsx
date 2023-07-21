@@ -172,34 +172,44 @@ export default function App() {
 
 `;
 
+  const snippet15 = `
+  // From this: 
+
+  const { name, value } = event.target
+
+  // We end passing this
+
+  [name]: value 
+
+  // Final result
+
+  setInputForm({ ...inputForm, [name]: value })
+
+`;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className="">
         <h1 className=" text-[54px] font-bold    ">Hey There!</h1>
         <h3 className=" leading-[16px] font-bold     ">Welcome to this repository. </h3>
-        <br></br>
         <p className="font-sans leading-[18px]    ">
           Here you can have a look on 1 technical challenge I complete for Inxel. You can have a
           clear step by step view through the whole process.
         </p>
       </div>
       <InxelTest />
-      <div>
+      <div className="flex flex-col gap-5 ">
         <h3 className=" leading-[16px] font-bold   ">But... How does it work?</h3>
-        <br></br>
         <p>This is mainly a simple but really usefull contact manager.</p>
         <p>
           This is running in a local enviorment with hard-coded data. This was a project requirment
           but it can fetch any API to add real data.
         </p>
-        <br></br>
         <h3 className=" leading-[16px] font-bold   ">Step #1:</h3>
-        <br></br>
         <p>
           The first step was to make the whole structure in HTML. As we are working with React, the
           proper name would be JSX .
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 1</i>
@@ -208,18 +218,13 @@ export default function App() {
             {snippet1}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <h3 className=" leading-[16px] font-bold ">Step #2</h3>
-        <br></br>
         <p>Here we add the attributes each tag will have in order to work as planned.</p>
-        <br></br>
         <p>
           We add the "name" attribute as an identifier. Then we add the "value and onChange" with
           "&#123; &#125;" so they can receive dynamic values or functions.
         </p>
-        <br></br>
         <p>This is how the input tag should look like:</p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 2</i>
@@ -228,9 +233,7 @@ export default function App() {
             {snippet2}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>Then we add the similar attributes to "option and select" tags:</p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 3</i>
@@ -240,12 +243,10 @@ export default function App() {
             {snippet3}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>
           The last tag we are missing here is the Button to submit the data collected. We need to
           add the "type=submit" and the "onClick=&#123;&#125;" to execute something when is clicked.
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 4</i>
@@ -254,16 +255,13 @@ export default function App() {
             {snippet4}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>
           After that we keep adding attributes now to the buttons that are going to toggle the
           "Person and Company" list, as well as the "A-Z" button.
         </p>
-        <br></br>
         <p>
           We add the "&#123; &#125;" to the className because we need to make the styles dynamic:
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 5</i>
@@ -272,16 +270,12 @@ export default function App() {
             {snippet5}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <h3 className=" leading-[16px] font-bold ">Step #3</h3>
-        <br></br>
         <p>At this point, we need to start creating the logic for this parent component.</p>
-        <br></br>
         <p>
           First we create the "useState" that is going to have the hard-coded data (We can use any
           API to download real users) and store them in the same useState.
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 6</i>
@@ -290,26 +284,20 @@ export default function App() {
             {snippet6}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>As you can see, we only have 3 values per object:</p>
-        <br></br>
         <ul className="list-disc pl-[30px]">
           <li>name</li>
           <li>number</li>
           <li>type</li>
         </ul>
-        <br></br>
         <p>This is because for the purpose of the exercise, we don't need more data.</p>
-        <br></br>
         <p>
           Now we create the "useState" where we are going to receive the data from the Form Tag.
         </p>
-        <br></br>
         <p>
           Notice how we add the "name" as empty as well as the "number". But the "type" is already
           filled. This is because "person" will be the default value.
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 7</i>
@@ -318,17 +306,14 @@ export default function App() {
             {snippet7}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>
           For now, we will have 2 main functions. 1 that handles the entry in the Input and Select
           Tags. And 2, the one that handles the Submit action.
         </p>
-        <br></br>
         <p>
           First, let's create "handleChange", this will control what happens with each Input Tag and
           with the Select and Option Tags.
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 8</i>
@@ -337,22 +322,17 @@ export default function App() {
             {snippet8}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>Let's break it down:</p>
-        <br></br>
         <ul className="list-decimal pl-[30px]">
           <li>We receive an event</li>
           <li>We "extract" the name and the value from the event.target</li>
           <li>We "send" the receive data to the empty variable we create in the useState.</li>
         </ul>
-        <br></br>
         <p>Point #1:</p>
-        <br></br>
         <p>
           As for any onChange attribute, we are going to receive an event, that event is going to be
           passed in the function to use it.
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 9</i>
@@ -361,12 +341,10 @@ export default function App() {
             {snippet9}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>
           Remember we add a "name" attribute to Inputs and Select Tags? Well, now we are going to
           use extract them from the "event.target.name".
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 10</i>
@@ -375,13 +353,11 @@ export default function App() {
             {snippet10}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>
           For the value it could be a little tricky because we added a "value" attribute to Input,
           Select and Option Tags, but we are going to extract the "value" from Input and Select Tags
           only. You will get it soon!
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 11</i>
@@ -390,12 +366,10 @@ export default function App() {
             {snippet11}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>
           Now if we apply some deconstruction, we can write the next lines because both "value" and
           "name" come from "event.target".
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 12</i>
@@ -404,18 +378,15 @@ export default function App() {
             {snippet12}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>
           Great! Now we have to send the data entries to the "inputForm" variable we created in the
           "useState".
         </p>
-        <br></br>
         <p>
           For this we need to call the function "setInputForm" and with the spread operator state
           that what ever it's already in there, we are going to add the entry data from the Input
           and Select Tags.
         </p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 13</i>
@@ -424,13 +395,9 @@ export default function App() {
             {snippet13}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>Again, let's break it down:</p>
-        <br></br>
         <p>After using the Spread Operator, we have to state what we want to add.</p>
-        <br></br>
         <p>Check it out:</p>
-        <br></br>
         <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 14</i>
@@ -439,18 +406,13 @@ export default function App() {
             {snippet14}
           </SyntaxHighlighter>
         </div>
-        <br></br>
         <p>Now, what's that weird syntaxis of "[name]: value"?</p>
-        <br></br>
         <p>Do you remember we added the "name" attribute to each Input and Select Tag? </p>
-        <br></br>
         <p>Do you remember we were going to make them dynamic?</p>
-        <br></br>
         <p>
           Well, as we are basically receiving/listening each one of those attributes, we can call it
           an Array
         </p>
-        <br></br>
         <p>
           And as we are saying that each one of those "name" elements has a value, we add the value
           to each one.
@@ -460,9 +422,10 @@ export default function App() {
             <i className="text-black  ">Snippet 15</i>
           </div>
           <SyntaxHighlighter language="jsx" style={dracula}>
-            {snippet14}
+            {snippet15}
           </SyntaxHighlighter>
         </div>
+        <p>Great! Our handleChange function is complete!</p>
       </div>
     </article>
   );
