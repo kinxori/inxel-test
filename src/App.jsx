@@ -92,6 +92,15 @@ export default function App() {
 
 `;
 
+  const snippet6 = `
+  const [inputForm, setInputData] = useState({
+    name: "",
+    number: "",
+    type: "person",
+  });
+
+`;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className="">
@@ -123,7 +132,7 @@ export default function App() {
         <SyntaxHighlighter
           language="jsx"
           style={dracula}
-          className="rounded-[10px] overflow-hidden "
+          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] "
         >
           {snippet1}
         </SyntaxHighlighter>
@@ -142,7 +151,7 @@ export default function App() {
         <SyntaxHighlighter
           language="jsx"
           style={dracula}
-          className="rounded-[10px] overflow-hidden "
+          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
         >
           {snippet2}
         </SyntaxHighlighter>
@@ -152,7 +161,7 @@ export default function App() {
         <SyntaxHighlighter
           language="jsx"
           style={dracula}
-          className="rounded-[10px] overflow-hidden "
+          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
         >
           {snippet3}
         </SyntaxHighlighter>
@@ -169,7 +178,7 @@ export default function App() {
         <SyntaxHighlighter
           language="jsx"
           style={dracula}
-          className="rounded-[10px] overflow-hidden "
+          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
         >
           {snippet4}
         </SyntaxHighlighter>
@@ -179,27 +188,44 @@ export default function App() {
         <p>At this point, we need to start creating the logic for this parent component.</p>
         <br></br>
         <p>
-          First we create the useState that is going to have the hard-coded data (We can use any API
-          to download real users) and store them in the same useState.
+          First we create the "useState" that is going to have the hard-coded data (We can use any
+          API to download real users) and store them in the same useState.
         </p>
         <br></br>
         <SyntaxHighlighter
           language="jsx"
           style={dracula}
-          className="rounded-[10px] overflow-hidden "
+          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
         >
           {snippet5}
         </SyntaxHighlighter>
         <br></br>
-        <p>As you can see, we only have 3 values:</p>
+        <p>As you can see, we only have 3 values per object:</p>
         <br></br>
-        <ul className="list-disc pl-[20px]">
+        <ul className="list-disc pl-[30px]">
           <li>name</li>
           <li>number</li>
           <li>type</li>
         </ul>
         <br></br>
         <p>This is because for the purpose of the exercise, we don't need more data.</p>
+        <br></br>
+        <p>
+          Now we create the "useState" where we are going to receive the data from the Form Tag.
+        </p>
+        <br></br>
+        <p>
+          Notice how we add the "name" as empty as well as the "number". But the "type" is already
+          filled. This is because "person" will be the default value.
+        </p>
+        <br></br>
+        <SyntaxHighlighter
+          language="jsx"
+          style={dracula}
+          className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)]"
+        >
+          {snippet6}
+        </SyntaxHighlighter>
       </div>
     </article>
   );
