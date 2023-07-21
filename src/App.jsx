@@ -187,6 +187,19 @@ export default function App() {
 
 `;
 
+  const snippet16 = `
+  // We declare the "value" comes from "inputForm.name" each one with its corresponding data.
+  // We pass the "handleChange" function to the "onChange" attribute in each Tag.
+  // This could be interpreted as "I pass you the power to modify the data and the other one is just going to display that modified data".
+
+  <input name="name" value={inputForm.name} onChange={handleChange}></input>
+
+  <input name="number" value={inputForm.number} onChange={handleChange}></input>
+
+  <select name="type" value={inputForm.type} onChange={handleChange}>
+
+`;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className="">
@@ -426,6 +439,15 @@ export default function App() {
           </SyntaxHighlighter>
         </div>
         <p>Great! Our handleChange function is complete!</p>
+        <p>Let's add the corresponding information to each Tag.</p>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 16</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet16}
+          </SyntaxHighlighter>
+        </div>
       </div>
     </article>
   );
