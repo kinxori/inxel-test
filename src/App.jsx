@@ -126,7 +126,22 @@ export default function App() {
 `;
 
   const snippet9 = `
-const handleChange = (event) => {}; // We receive the event
+  const handleChange = (event) => {}; // We receive the event
+
+`;
+
+  const snippet10 = `
+  const name = event.target.name;
+
+`;
+
+  const snippet11 = `
+  const value = event.target.value;
+
+`;
+
+  const snippet12 = `
+  const { name, value } = event.target;
 
 `;
 
@@ -320,6 +335,19 @@ const handleChange = (event) => {}; // We receive the event
           </SyntaxHighlighter>
         </div>
         <br></br>
+        <p>
+          Remember we add a "name" attribute to Inputs and Select Tags? Well, now we are going to
+          use extract them from the "event.target.name".
+        </p>
+        <br></br>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 9</i>
+          </div>
+          <SyntaxHighlighter language="jsx" style={dracula}>
+            {snippet9}
+          </SyntaxHighlighter>
+        </div>
       </div>
     </article>
   );
