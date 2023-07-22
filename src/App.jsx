@@ -201,22 +201,22 @@ export default function App() {
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className=" flex flex-col gap-5">
         <h1 className=" text-[54px] font-bold    ">Hey There!</h1>
-        <h3 className=" leading-[16px] font-bold     ">Welcome to this repository. </h3>
+        <h3 className="text-[20px] leading-[16px] font-bold     ">Welcome to this repository. </h3>
         <p className="font-sans leading-[18px]    ">
           Here you can have a look on 1 technical challenge I completed for Inxel. You can have a
           clear step by step view through the whole process.
         </p>
       </div>
       <InxelTest />
-      <div className="flex flex-col gap-5 ">
-        <h3 className=" leading-[16px] font-bold   ">But... How does it work?</h3>
+      <div className="flex flex-col gap-6 ">
+        <h3 className="text-[20px] leading-[16px] font-bold   ">But... How does it work?</h3>
         <p>This is mainly a simple but really usefull contact manager.</p>
         <p>
           This is running in a local enviorment with hard-coded data. This was a project requirment
           but you can fetch any API to add real data.
         </p>
-        <div className="flex flex-col gap-5 ">
-          <h3 className=" leading-[16px] font-bold   ">Step #1:</h3>
+        <div className="flex flex-col gap-6 ">
+          <h3 className="text-[20px] leading-[16px] font-bold   ">Step #1:</h3>
           <p>
             The first step was to make the whole structure in HTML. As we are working with React,
             the proper name would be JSX .
@@ -231,8 +231,8 @@ export default function App() {
             </SyntaxHighlighter>
           </div>
         </div>
-        <div className="flex flex-col gap-5 ">
-          <h3 className=" leading-[16px] font-bold ">Step #2</h3>
+        <div className="flex flex-col gap-6 ">
+          <h3 className="text-[20px] leading-[16px] font-bold ">Step #2</h3>
           <p>Here we add the attributes each tag will have in order to work as planned.</p>
           <p>
             We add the "name" attribute as an identifier. Then we add the "value and onChange" with
@@ -279,8 +279,8 @@ export default function App() {
             </SyntaxHighlighter>
           </div>
         </div>
-        <div className="flex flex-col gap-5 ">
-          <h3 className=" leading-[16px] font-bold ">Step #3</h3>
+        <div className="flex flex-col gap-6 ">
+          <h3 className="text-[20px] leading-[16px] font-bold ">Step #3</h3>
           <p>At this point, we need to start creating the logic for this parent component.</p>
           <p>
             First we create the "useState" that is going to have the hard-coded data (We can use any
