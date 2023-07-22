@@ -215,12 +215,16 @@ export default function App() {
             The first step was to make the whole structure in HTML. As we are working with React,
             the proper name would be JSX .
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
-            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 1</i>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-black flex items-center pl-[10px]   ">
+              <i className="text-white  ">Snippet 1</i>
             </div>
-            <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet1}
             </SyntaxHighlighter>
           </div>
@@ -238,7 +242,11 @@ export default function App() {
               <i className="text-black  ">Snippet 2</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet2}
             </SyntaxHighlighter>
           </div>
@@ -252,7 +260,11 @@ export default function App() {
               <i className="text-black  ">Snippet 3</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet3}
             </SyntaxHighlighter>
           </div>
@@ -268,7 +280,11 @@ export default function App() {
               <i className="text-black  ">Snippet 4</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet4}
             </SyntaxHighlighter>
           </div>
@@ -285,7 +301,11 @@ export default function App() {
               <i className="text-black  ">Snippet 5</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet5}
             </SyntaxHighlighter>
           </div>
@@ -302,14 +322,19 @@ export default function App() {
           </p>
           <p>
             Notice how we add the "name" as empty as well as the "number". But the "type" is already
-            filled. This is because "person" will be the default value at the start.
+            filled. This is because the value of the Input Tags will be empty at first, but "person"
+            will be the default value at the start.
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 6</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet6}
             </SyntaxHighlighter>
           </div>
