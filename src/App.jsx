@@ -5,8 +5,6 @@ import asset1 from "./assets/inxel-test-asset-1.mp4";
 
 export default function App() {
   const snippet1 = `  
-  {*  Basic HTML structure *}
-
   <article>
     <div>
       <form>
@@ -28,12 +26,9 @@ export default function App() {
       <div> <CardComponent...> </div>
     </div>
   </article>
-
 `;
 
   const snippet2 = `
-  {*  Basic HTML structure *}
-
   <input 
     type="text" 
     value={null} 
@@ -58,14 +53,12 @@ export default function App() {
     <option value="person">Person</option>
     <option value="company">Company</option>
   </select>
-
 `;
 
   const snippet3 = `
   <button onClick={null} type="submit">
     Add
   </button>
-
 `;
 
   const snippet4 = `
@@ -78,7 +71,6 @@ export default function App() {
   <button className={null} onClick={null}>
     A-Z
   </button>
-
 `;
 
   const snippet5 = `
@@ -96,7 +88,6 @@ export default function App() {
       name: "Fer", number: "32195", type: "company",
     },
   ]);
-
 `;
 
   const snippet6 = `
@@ -105,30 +96,25 @@ export default function App() {
     number: "",
     type: "person",
   });
-
 `;
 
   const snippet7 = `
   const handleChange = () => {};
-  
+`;
+
+  const snippet8 = `
+  const handleChange = (event) => {}; // We receive the event
 `;
 
   const snippet9 = `
-  const handleChange = (event) => {}; // We receive the event
-
+  const name = event.target.name;
 `;
 
   const snippet10 = `
-  const name = event.target.name;
-
+  const value = event.target.value;
 `;
 
   const snippet11 = `
-  const value = event.target.value;
-
-`;
-
-  const snippet12 = `
   // This is the same as...
 
   const { name, value } = event.target; 
@@ -137,15 +123,13 @@ export default function App() {
 
   const name = event.target.name;
   const value = event.target.value;
+`;
 
+  const snippet12 = `
+  setInputData({ ...inputForm, [name]: value });
 `;
 
   const snippet13 = `
-  setInputData({ ...inputForm, [name]: value });
-
-`;
-
-  const snippet14 = `
   // What ever it's in here...
 
   { ...inputForm } 
@@ -157,10 +141,9 @@ export default function App() {
   // Update the varible content calling it's function from the useState
 
   setInputForm()
-
 `;
 
-  const snippet15 = `
+  const snippet14 = `
   // From this: 
 
   const { name, value } = event.target
@@ -172,10 +155,9 @@ export default function App() {
   // Final result
 
   setInputForm({ ...inputForm, [name]: value })
-
 `;
 
-  const snippet16 = `
+  const snippet15 = `
   // We declare that "value" comes from each one of its "inputForm.name".
   // We pass the "handleChange" function to the "onChange" attribute in each Tag.
   // This could be interpreted as "I pass you the power to modify the data and the other one is just going to display that modified data".
@@ -185,7 +167,6 @@ export default function App() {
   <input name="number" value={inputForm.number} onChange={handleChange}></input>
 
   <select name="type" value={inputForm.type} onChange={handleChange}>
-
 `;
 
   return (
@@ -367,7 +348,7 @@ export default function App() {
           <p>First the event:</p>
           <p>
             As for any onChange attribute, we are going to receive an Event, that parameter is going
-            to be used in the function.
+            to be used in this function.
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -379,12 +360,12 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet9}
+              {snippet8}
             </SyntaxHighlighter>
           </div>
           <p>
-            Remember we add a "name" attribute to Inputs and Select Tags? Well, now we are going to
-            use extract them from the "event.target.name".
+            Remember we add a "name" attribute to Input and Select Tags? Well, now we are going to
+            extract them from the "event.target.name".
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -396,7 +377,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet10}
+              {snippet9}
             </SyntaxHighlighter>
           </div>
           <p>
@@ -414,7 +395,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet11}
+              {snippet10}
             </SyntaxHighlighter>
           </div>
           <p>
@@ -431,7 +412,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet12}
+              {snippet11}
             </SyntaxHighlighter>
           </div>
           <p>
@@ -453,7 +434,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet13}
+              {snippet12}
             </SyntaxHighlighter>
           </div>
           <p>Again, let's break it down:</p>
@@ -469,7 +450,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet14}
+              {snippet13}
             </SyntaxHighlighter>
           </div>
           <p>Now, what's that weird syntaxis of "[name]: value"?</p>
@@ -493,7 +474,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet15}
+              {snippet14}
             </SyntaxHighlighter>
           </div>
           <p>Great! Our handleChange function is complete!</p>
@@ -508,7 +489,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet16}
+              {snippet15}
             </SyntaxHighlighter>
           </div>
           <p>
