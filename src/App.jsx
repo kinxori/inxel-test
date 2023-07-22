@@ -1,6 +1,7 @@
 import InxelTest from "./components/inxel-test";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import asset1 from "./assets/inxel-test-asset-1.mp4";
 
 export default function App() {
   const snippet1 = `  
@@ -452,6 +453,18 @@ export default function App() {
           Your Form should be dynamic and at the same time updating the data inside your "inputForm"
           variable.
         </p>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <video
+            src={asset1}
+            loop
+            autoPlay
+            controls
+            disablePictureInPicture
+            disableRemotePlayback
+            controlsList="nodownload noremoteplayback noplaybackrate "
+            muted
+          ></video>
+        </div>
       </div>
     </article>
   );
