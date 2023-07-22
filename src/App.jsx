@@ -108,11 +108,8 @@ export default function App() {
 
 `;
 
-  const snippet8 = `
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setInputData({ ...inputForm, [name]: value });
-  };
+  const snippet7 = `
+  const handleChange = () => {};
   
 `;
 
@@ -343,8 +340,8 @@ export default function App() {
             Tags. And 2, the one that handles the Submit action.
           </p>
           <p>
-            First, let's create "handleChange", this will control what happens with each Input Tag
-            and with the Select and Option Tags.
+            First, let's create "handleChange", this will control what happens with each Input and
+            Select Tags.
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -356,19 +353,21 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet8}
+              {snippet7}
             </SyntaxHighlighter>
           </div>
-          <p>Let's break it down:</p>
-          <ul className="list-decimal pl-[30px]">
+          <p>Let's add the rest:</p>
+          <ul className="list-disc pl-[30px]">
             <li>We receive an event</li>
-            <li>We "extract" the name and the value from the event.target</li>
-            <li>We "send" the receive data to the empty variable we create in the useState.</li>
+            <li>We extract the name and the value from the "event.target".</li>
+            <li>
+              We send the received data to the empty variable we create in the useState "inputForm".
+            </li>
           </ul>
-          <p>Point #1:</p>
+          <p>First the event:</p>
           <p>
-            As for any onChange attribute, we are going to receive an event, that event is going to
-            be passed in the function to use it.
+            As for any onChange attribute, we are going to receive an Event, that parameter is going
+            to be used in the function.
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">

@@ -61,6 +61,7 @@ function InxelTest() {
   const filteredPerson = data.filter((item) => {
     return item.type === "person";
   });
+
   const filteredCompany = data.filter((item) => {
     return item.type === "company";
   });
