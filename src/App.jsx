@@ -79,33 +79,25 @@ export default function App() {
 
 `;
 
-  const snippet6 = `
+  const snippet5 = `
   const [data, setData] = useState([
     {
-      name: "John",
-      number: "25937",
-      type: "person",
+      name: "John", number: "25937", type: "person",
     },
     {
-      name: "Peter",
-      number: "29745",
-      type: "person",
+      name: "Peter", number: "29745", type: "person",
     },
     {
-      name: "Richard",
-      number: "82832",
-      type: "company",
+      name: "Richard", number: "82832", type: "company",
     },
     {
-      name: "Fer",
-      number: "32195",
-      type: "company",
+      name: "Fer", number: "32195", type: "company",
     },
   ]);
 
 `;
 
-  const snippet7 = `
+  const snippet6 = `
   const [inputForm, setInputData] = useState({
     name: "",
     number: "",
@@ -284,18 +276,18 @@ export default function App() {
           <p>At this point, we need to start creating the logic for this parent component.</p>
           <p>
             First we create the "useState" that is going to have the hard-coded data (We can use any
-            API to download real users) and store them in the same useState.
+            API to download real users and store them in the same useState).
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 6</i>
+              <i className="text-black  ">Snippet 5</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
-              {snippet6}
+            <SyntaxHighlighter language="javascript" style={dracula}>
+              {snippet5}
             </SyntaxHighlighter>
           </div>
-          <p>As you can see, we only have 3 values per object:</p>
+          <p>As you can see, we only have 3 key-value per object:</p>
           <ul className="list-disc pl-[30px]">
             <li>name</li>
             <li>number</li>
@@ -303,19 +295,20 @@ export default function App() {
           </ul>
           <p>This is because for the purpose of the exercise, we don't need more data.</p>
           <p>
-            Now we create the "useState" where we are going to receive the data from the Form Tag.
+            Now we create the "useState" where we are going to receive the submitted data from the
+            Form.
           </p>
           <p>
             Notice how we add the "name" as empty as well as the "number". But the "type" is already
-            filled. This is because "person" will be the default value.
+            filled. This is because "person" will be the default value at the start.
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 7</i>
+              <i className="text-black  ">Snippet 6</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
-              {snippet7}
+            <SyntaxHighlighter language="javascript" style={dracula}>
+              {snippet6}
             </SyntaxHighlighter>
           </div>
           <p>
