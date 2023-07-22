@@ -188,7 +188,7 @@ export default function App() {
 `;
 
   const snippet16 = `
-  // We declare the "value" comes from "inputForm.name" each one with its corresponding data.
+  // We declare that "value" comes from each one of its "inputForm.name".
   // We pass the "handleChange" function to the "onChange" attribute in each Tag.
   // This could be interpreted as "I pass you the power to modify the data and the other one is just going to display that modified data".
 
@@ -202,7 +202,7 @@ export default function App() {
 
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
-      <div className="">
+      <div className=" flex flex-col gap-5">
         <h1 className=" text-[54px] font-bold    ">Hey There!</h1>
         <h3 className=" leading-[16px] font-bold     ">Welcome to this repository. </h3>
         <p className="font-sans leading-[18px]    ">
@@ -448,6 +448,10 @@ export default function App() {
             {snippet16}
           </SyntaxHighlighter>
         </div>
+        <p>
+          Your Form should be dynamic and at the same time updating the data inside your "inputForm"
+          variable.
+        </p>
       </div>
     </article>
   );
