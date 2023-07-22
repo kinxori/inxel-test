@@ -25,7 +25,7 @@ export default function App() {
         <button> Company </button>
         <button> A-Z </button>
       </div>
-      <div> <Card Component> </div>
+      <div> <CardComponent...> </div>
     </div>
   </article>
 
@@ -48,22 +48,18 @@ export default function App() {
     onChange={null}
   >
   </input>
-
-`;
-
-  const snippet3 = `
-  <select
+    <select
     name="type"
-    value={inputForm.type}
-    onChange={handleChange}
+    value={null}
+    onChange={null}
   >
-      <option value="person">Person</option>
-      <option value="company">Company</option>
+    <option value="person">Person</option>
+    <option value="company">Company</option>
   </select>
 
 `;
 
-  const snippet4 = `
+  const snippet3 = `
   <button onClick={null} type="submit">
     Add
   </button>
@@ -207,7 +203,7 @@ export default function App() {
         <h1 className=" text-[54px] font-bold    ">Hey There!</h1>
         <h3 className=" leading-[16px] font-bold     ">Welcome to this repository. </h3>
         <p className="font-sans leading-[18px]    ">
-          Here you can have a look on 1 technical challenge I complete for Inxel. You can have a
+          Here you can have a look on 1 technical challenge I completed for Inxel. You can have a
           clear step by step view through the whole process.
         </p>
       </div>
@@ -217,7 +213,7 @@ export default function App() {
         <p>This is mainly a simple but really usefull contact manager.</p>
         <p>
           This is running in a local enviorment with hard-coded data. This was a project requirment
-          but it can fetch any API to add real data.
+          but you can fetch any API to add real data.
         </p>
         <div className="flex flex-col gap-5 ">
           <h3 className=" leading-[16px] font-bold   ">Step #1:</h3>
@@ -242,7 +238,7 @@ export default function App() {
             We add the "name" attribute as an identifier. Then we add the "value and onChange" with
             "&#123; &#125;" so they can receive dynamic values or functions.
           </p>
-          <p>This is how the input tag should look like:</p>
+          <p>This is how the our Form Tags should look like:</p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 2</i>
@@ -252,16 +248,6 @@ export default function App() {
               {snippet2}
             </SyntaxHighlighter>
           </div>
-          <p>Then we add the similar attributes to "option and select" tags:</p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
-            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 3</i>
-            </div>
-            <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
-              {snippet3}
-            </SyntaxHighlighter>
-          </div>
           <p>
             The last tag we are missing here is the Button to submit the data collected. We need to
             add the "type=submit" and the "onClick=&#123;&#125;" to execute something when is
@@ -269,11 +255,11 @@ export default function App() {
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 4</i>
+              <i className="text-black  ">Snippet 3</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
             <SyntaxHighlighter language="jsx" style={dracula}>
-              {snippet4}
+              {snippet3}
             </SyntaxHighlighter>
           </div>
           <p>
