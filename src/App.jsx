@@ -216,8 +216,8 @@ export default function App() {
             the proper name would be JSX .
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
-            <div className="w-[100%] h-[30px] bg-black flex items-center pl-[10px]   ">
-              <i className="text-white  ">Snippet 1</i>
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 1</i>
             </div>
             <hr className="border-white border-[2px]"></hr>
             <SyntaxHighlighter
@@ -237,7 +237,7 @@ export default function App() {
             "&#123; &#125;" so they can receive dynamic values or functions.
           </p>
           <p>This is how the our Input, Select, and Option Tags should look like:</p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 2</i>
             </div>
@@ -255,7 +255,7 @@ export default function App() {
             add the "type=submit" and the "onClick=&#123;&#125;" to execute something when is
             clicked.
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 3</i>
             </div>
@@ -275,7 +275,7 @@ export default function App() {
           <p>
             We add the "&#123; &#125;" to the className because we need to make the styles dynamic:
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 4</i>
             </div>
@@ -296,7 +296,7 @@ export default function App() {
             First we create the "useState" that is going to have the hard-coded data (We can use any
             API to download real users and store them in the same useState).
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 5</i>
             </div>
@@ -325,7 +325,7 @@ export default function App() {
             filled. This is because the value of the Input Tags will be empty at first, but "person"
             will be the default value at the start.
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 6</i>
             </div>
@@ -346,12 +346,16 @@ export default function App() {
             First, let's create "handleChange", this will control what happens with each Input Tag
             and with the Select and Option Tags.
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 8</i>
+              <i className="text-black  ">Snippet 7</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet8}
             </SyntaxHighlighter>
           </div>
@@ -366,12 +370,16 @@ export default function App() {
             As for any onChange attribute, we are going to receive an event, that event is going to
             be passed in the function to use it.
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 9</i>
+              <i className="text-black  ">Snippet 8</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet9}
             </SyntaxHighlighter>
           </div>
@@ -379,12 +387,16 @@ export default function App() {
             Remember we add a "name" attribute to Inputs and Select Tags? Well, now we are going to
             use extract them from the "event.target.name".
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 10</i>
+              <i className="text-black  ">Snippet 9</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet10}
             </SyntaxHighlighter>
           </div>
@@ -393,12 +405,16 @@ export default function App() {
             Select and Option Tags, but we are going to extract the "value" from Input and Select
             Tags only. You will get it soon!
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 11</i>
+              <i className="text-black  ">Snippet 10</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet11}
             </SyntaxHighlighter>
           </div>
@@ -406,12 +422,16 @@ export default function App() {
             Now if we apply some deconstruction, we can write the next lines because both "value"
             and "name" come from "event.target".
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 12</i>
+              <i className="text-black  ">Snippet 11</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet12}
             </SyntaxHighlighter>
           </div>
@@ -424,24 +444,32 @@ export default function App() {
             that what ever it's already in there, we are going to add the entry data from the Input
             and Select Tags.
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 13</i>
+              <i className="text-black  ">Snippet 12</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet13}
             </SyntaxHighlighter>
           </div>
           <p>Again, let's break it down:</p>
           <p>After using the Spread Operator, we have to state what we want to add.</p>
           <p>Check it out:</p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 14</i>
+              <i className="text-black  ">Snippet 13</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet14}
             </SyntaxHighlighter>
           </div>
@@ -456,23 +484,31 @@ export default function App() {
             And as we are saying that each one of those "name" elements has a value, we add the
             value to each one.
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 15</i>
+              <i className="text-black  ">Snippet 14</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet15}
             </SyntaxHighlighter>
           </div>
           <p>Great! Our handleChange function is complete!</p>
           <p>Let's add the corresponding information to each Tag.</p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 16</i>
+              <i className="text-black  ">Snippet 15</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
               {snippet16}
             </SyntaxHighlighter>
           </div>
@@ -480,7 +516,7 @@ export default function App() {
             Your Form should be controllable and at the same time updating the data inside your
             "inputForm" variable.
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <video
               src={asset1}
               loop
