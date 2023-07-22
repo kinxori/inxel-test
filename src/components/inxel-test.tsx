@@ -32,8 +32,6 @@ function InxelTest() {
     },
   ]);
 
-  console.log("inputForm console: ", inputForm);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setInputData({ ...inputForm, [name]: value });
