@@ -66,7 +66,7 @@ export default function App() {
 
 `;
 
-  const snippet5 = `
+  const snippet4 = `
   <button className={null} onClick={null}>
     Person
   </button>
@@ -238,7 +238,7 @@ export default function App() {
             We add the "name" attribute as an identifier. Then we add the "value and onChange" with
             "&#123; &#125;" so they can receive dynamic values or functions.
           </p>
-          <p>This is how the our Form Tags should look like:</p>
+          <p>This is how the our Input, Select, and Option Tags should look like:</p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 2</i>
@@ -249,7 +249,7 @@ export default function App() {
             </SyntaxHighlighter>
           </div>
           <p>
-            The last tag we are missing here is the Button to submit the data collected. We need to
+            The last Tag we are missing here is the Button to submit the data collected. We need to
             add the "type=submit" and the "onClick=&#123;&#125;" to execute something when is
             clicked.
           </p>
@@ -264,18 +264,18 @@ export default function App() {
           </div>
           <p>
             After that we keep adding attributes now to the buttons that are going to toggle the
-            "Person and Company" list, as well as the "A-Z" button.
+            "Person and Company" lists, as well as the "A-Z" button.
           </p>
           <p>
             We add the "&#123; &#125;" to the className because we need to make the styles dynamic:
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] border-black border-[3px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 5</i>
+              <i className="text-black  ">Snippet 4</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
             <SyntaxHighlighter language="jsx" style={dracula}>
-              {snippet5}
+              {snippet4}
             </SyntaxHighlighter>
           </div>
         </div>
