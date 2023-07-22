@@ -74,12 +74,12 @@ function InxelTest() {
       className="flex 
     flex-col 
     rounded-[10px] 
-    border-[3px] 
-    border-black 
+    border-[2px] 
+    border-white 
     my-10
-    bg-white
+    bg-black
     overflow-hidden
-    drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] 
+    drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] 
     "
     >
       <div
@@ -101,8 +101,8 @@ function InxelTest() {
             h-[40px]
             rounded-[10px]
             pl-[10px]
-            bg-black
-            placeholder:text-[rgba(250,250,250,.2)]
+            bg-white
+            placeholder:text-[rgba(0,0,0,.5)]
             "
           ></input>
           <input
@@ -116,8 +116,8 @@ function InxelTest() {
             h-[40px]
             rounded-[10px]
             pl-[10px]
-            bg-black
-            placeholder:text-[rgba(250,250,250,.2)]
+            bg-white
+            placeholder:text-[rgba(0,0,0,.5)]
             "
           ></input>
           <select
@@ -128,18 +128,25 @@ function InxelTest() {
             h-[40px]
             rounded-[10px]
             pl-[5px]
-            bg-black
+            bg-white
+            text-black
             "
           >
             <option value="person">Person</option>
             <option value="company">Company</option>
           </select>
           <button
-            className="bg-white text-black  border-[2px] border-solid border-black  "
+            className="
+            bg-white
+            text-black 
+            border-white  
+              rounded-[10px]
+              h-[40px]
+              "
             onClick={handleSubmit}
             type="submit"
           >
-            Add
+            Add Contact
           </button>
         </form>
       </div>
@@ -157,20 +164,20 @@ function InxelTest() {
       >
         <div className=" flex gap-[5px] h-[40px] justify-around  ">
           <button
-            className={typeDisplay === "person" ? " bg-black text-white " : "bg-white text-black"}
+            className={typeDisplay === "person" ? " bg-white text-black " : "bg-black text-white"}
             onClick={() => setTypeDisplay("person")}
           >
             Person
           </button>
           <button
-            className={typeDisplay === "company" ? " bg-black text-white " : "bg-white text-black"}
+            className={typeDisplay === "company" ? " bg-white text-black " : "bg-black text-white"}
             onClick={() => setTypeDisplay("company")}
           >
             Company
           </button>
           <button
             onClick={handleAlphabetic}
-            className={isSorted ? " bg-black text-white  " : " bg-white text-black "}
+            className={isSorted ? " bg-white text-black  " : " bg-black text-white "}
           >
             A-Z
           </button>
@@ -219,7 +226,7 @@ function Card(props) {
       className="
  
       h-[60px]
-      bg-black
+      bg-white
       flex
       rounded-[10px]
       "
@@ -227,11 +234,12 @@ function Card(props) {
       <div
         className="
         w-[100%]
-     flex
-     justify-center
-     items-center
-     gap-[10px]
-     mx-[10px]
+        flex
+        justify-center
+        items-center
+        gap-[10px]
+        mx-[10px]
+        text-black
         "
       >
         <h3>{props.name}</h3>
@@ -240,8 +248,8 @@ function Card(props) {
           onClick={() => props.handleDelete(props.number)}
           className="
         ml-auto
-        bg-white
-        text-black
+        bg-black
+        text-white
         "
         >
           Delete
