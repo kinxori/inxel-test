@@ -32,6 +32,8 @@ export default function App() {
 `;
 
   const snippet2 = `
+  {*  Basic HTML structure *}
+
   <input 
     type="text" 
     value={null} 
@@ -48,7 +50,7 @@ export default function App() {
     onChange={null}
   >
   </input>
-    <select
+  <select
     name="type"
     value={null}
     onChange={null}
@@ -218,7 +220,7 @@ export default function App() {
               <i className="text-black  ">Snippet 1</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={dracula}>
               {snippet1}
             </SyntaxHighlighter>
           </div>
@@ -236,7 +238,7 @@ export default function App() {
               <i className="text-black  ">Snippet 2</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={dracula}>
               {snippet2}
             </SyntaxHighlighter>
           </div>
@@ -250,7 +252,7 @@ export default function App() {
               <i className="text-black  ">Snippet 3</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={dracula}>
               {snippet3}
             </SyntaxHighlighter>
           </div>
@@ -266,7 +268,7 @@ export default function App() {
               <i className="text-black  ">Snippet 4</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
-            <SyntaxHighlighter language="jsx" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={dracula}>
               {snippet4}
             </SyntaxHighlighter>
           </div>
