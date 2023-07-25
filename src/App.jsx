@@ -610,6 +610,14 @@ export default function App() {
             By this point our Form should be working 100%. The Inputs and Select Tags are
             controllable. The Button Tag sends the data to our chosen variable.
           </p>
+          <p>
+            We are missing the logic to display our new entries as cards. We are missing the filter
+            to select "person" or "company" type of contact. Also the "A-Z" sort button.
+          </p>
+          <p>
+            Let's start creating our Card component. As we are working with React, this is going to
+            use composition.
+          </p>
         </div>
       </div>
     </article>
