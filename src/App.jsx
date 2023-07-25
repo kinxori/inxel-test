@@ -549,6 +549,23 @@ export default function App() {
               {snippet16}
             </SyntaxHighlighter>
           </div>
+          <p>
+            In this function we receive an event parameter as well. This is going to be only to
+            prevent the defualt value of a Button Tag. Which is reload the page.
+          </p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 17</i>
+            </div>
+            <hr className="border-black border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet17}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
     </article>
