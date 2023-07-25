@@ -634,8 +634,12 @@ export default function App() {
         <div className="flex flex-col gap-6 ">
           <h3 className="text-[20px] leading-[16px] font-bold   ">Step #4</h3>
           <p>
-            Let's start creating our Card component. As we are working with React, this is going to
-            use composition.
+            Let's start creating our Card component. As we are working with React, it's going to use
+            composition.
+          </p>
+          <p>
+            This is going to help us re-use the same Card component but update the data we diplay as
+            we wish.
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -647,7 +651,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet1}
+              {snippet20}
             </SyntaxHighlighter>
           </div>
         </div>
