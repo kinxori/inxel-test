@@ -566,6 +566,30 @@ export default function App() {
               {snippet17}
             </SyntaxHighlighter>
           </div>
+          <p>
+            Now we save the current value of "inputForm" variable and place it in a new variable to
+            use it.
+          </p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 17</i>
+            </div>
+            <hr className="border-black border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet18}
+            </SyntaxHighlighter>
+          </div>
+          <p>Finally we are going to decide what to do with the click event.</p>
+          <p>In this case we want to have a ternary. We are going to ask:</p>
+          <ul className="list-disc pl-[30px]">
+            <li>name</li>
+            <li>number</li>
+            <li>type</li>
+          </ul>
         </div>
       </div>
     </article>
