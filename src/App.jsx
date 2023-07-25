@@ -242,10 +242,21 @@ export default function App() {
   `;
 
   const snippet23 = `
-  const [typeDisplay, setTypeDisplay] = useState("person");
+  // Here we are sorting the filteredPerson variable in alphabetical order.
+
+  const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+
+  // Here we are sorting the filteredCompany variable in alphabetical order.
+
+  const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
+
   `;
 
   const snippet24 = `
+  const [typeDisplay, setTypeDisplay] = useState("person");
+  `;
+
+  const snippet25 = `
   <div>
     <button
       className={typeDisplay === "person" ? "activeClass" : "idleClass"}
@@ -265,13 +276,13 @@ export default function App() {
   </div>
   `;
 
-  const snippet25 = `
+  const snippet26 = `
   // If typeDisplay equals "person", we display the first component, if not, we display the second component.
 
   {typeDisplay === "person" ? ( <p> First Component </p> ) : ( <p> Second Component </p> )}
   `;
 
-  const snippet26 = `
+  const snippet27 = `
   // 2 maps for each array.
 
   // 1 for filteredPerson
@@ -291,7 +302,7 @@ export default function App() {
   )
   `;
 
-  const snippet27 = `
+  const snippet28 = `
   {typeDisplay === "person" ? (
     filteredPerson.map((c) => (
       <div key={c.number}>
@@ -715,7 +726,7 @@ export default function App() {
             </li>
             <li>
               After that, we restore the values in Input and Select to their original state with
-              setInputData function.
+              "setInputData" function.
             </li>
           </ul>
           <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
@@ -737,23 +748,21 @@ export default function App() {
           </p>
           <p>
             We are missing the logic to display our new entries as cards. We are missing the filter
-            to select "person" or "company" type of contact. Also the "A-Z" sort button.
+            to select "person" or "company" and "A-Z" sort buttons. As well as the "Delete" inside
+            each card.
           </p>
         </div>
-        <div className="flex flex-col gap-2 ">
+        <div id="step-4" className="flex flex-col gap-2 ">
           <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Step #4</h3>
           <p>
-            Let's start creating our Card component. As we are working with React, it's going to use
-            composition.
+            Let's start creating our Card component. As we are working with React, we will use
+            composition to achieve this.
           </p>
-          <p>
-            This is going to help us re-use the same Card component but update the data we diplay as
-            we wish.
-          </p>
+          <p>This is going to help us re-use the same Card component for each object.</p>
           <p>This is going to look like this as JSX:</p>
           <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 21</i>
+              <i className="text-black  ">Snippet 20</i>
             </div>
             <hr className="border-white border-[2px]"></hr>
             <SyntaxHighlighter
@@ -765,7 +774,7 @@ export default function App() {
             </SyntaxHighlighter>
           </div>
           <p>
-            Alright! Now, as this is a child component. We need to receive the data we want to
+            Alright! Now, as this is a composition component. We need to receive the data we want to
             display as props.
           </p>
           <p>We add the props parameter to the component.</p>
@@ -817,6 +826,43 @@ export default function App() {
               {snippet22}
             </SyntaxHighlighter>
           </div>
+          <p>
+            Now we have 2 variables that store our filtered data based on the "type", but we also
+            need 2 more that will store the sorted values for each one.
+          </p>
+          <p>
+            These will be based on our previous filtered variables, this way our data source will
+            always be the updated.
+          </p>
+          <p>Your sorted variables should look something like this:</p>
+          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 23</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet23}
+            </SyntaxHighlighter>
+          </div>
+          <p>
+            Now we need to create 2 "useState" more. Here we are going to decide which of our 4
+            options will be rendered.
+          </p>
+          <ul className="list-disc pl-[30px] flex flex-col gap-2 ">
+            <li>Filtered Person Contact</li>
+            <li>Sorted Person Contact</li>
+            <li>Filtered Company Contact</li>
+            <li>Sorted Company Contact</li>
+          </ul>
+          <p></p>
+          {/* Step here  ------------------------------------*/}
+          {/* Step here  ------------------------------------*/}
+          {/* Step here  ------------------------------------*/}
+          {/* Step here  ------------------------------------*/}
           <p>Let's create the toggle for the Buttons "Person" or "Company".</p>
           <p>This is going to be a simple "useState" that toggles depending on the "type".</p>
           <p>As for this "useState", this will start with "person" string as the first value.</p>
