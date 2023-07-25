@@ -566,13 +566,10 @@ export default function App() {
               {snippet17}
             </SyntaxHighlighter>
           </div>
-          <p>
-            Now we save the current value of "inputForm" variable and place it in a new variable to
-            use it.
-          </p>
+          <p>Now we save the current value of "inputForm" in a new variable called "newEntry".</p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 17</i>
+              <i className="text-black  ">Snippet 18</i>
             </div>
             <hr className="border-black border-[2px]"></hr>
             <SyntaxHighlighter
@@ -587,12 +584,28 @@ export default function App() {
           <p>In this case we want to have a ternary. We are going to ask:</p>
           <ul className="list-disc pl-[30px]">
             <li>1.- If both Inputs are empty, when click event is triggered do nothing.</li>
-            <li>2.- If both are filled, add that new data entry in "inputForm" to "data".</li>
             <li>
-              3.- After that, we clear restore the values in Input and Select to their original
-              state.
+              2.- If both are filled, add that new data entry in "inputForm" to "data" with
+              "setData" function.
+            </li>
+            <li>
+              3.- After that, we restore the values in Input and Select to their original state with
+              setInputData function.
             </li>
           </ul>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 19</i>
+            </div>
+            <hr className="border-black border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet19}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
     </article>
