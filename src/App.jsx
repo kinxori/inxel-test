@@ -241,6 +241,30 @@ export default function App() {
   });
   `;
 
+  const snippet23 = `
+  const [typeDisplay, setTypeDisplay] = useState("person");
+  `;
+
+  const snippet24 = `
+  <div>
+    <button
+      className={typeDisplay === "person" ? "classActive" : "classIdle"}
+      onClick={() => setTypeDisplay("person")}
+    >
+      Person
+    </button>
+    <button
+      className={typeDisplay === "company" ? "classActive" : "classIdle"}
+      onClick={() => setTypeDisplay("company")}
+    >
+      Company
+    </button>
+    <button onClick={null} className={null}>
+      A-Z
+    </button>
+  </div>
+  `;
+
   const snippet = `
   function Card(props) {
     return (
@@ -746,6 +770,36 @@ export default function App() {
               showLineNumbers
             >
               {snippet22}
+            </SyntaxHighlighter>
+          </div>
+          <p>Let's create the toggle for the Buttons "Person" or "Company".</p>
+          <p>This is going to be a simple "useState" that toggles depending on the "type".</p>
+          <p>As for this "useState", this will start with "person" string as the first value.</p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 23</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet23}
+            </SyntaxHighlighter>
+          </div>
+          <p>Your Buttons to toggle between "Person", "Company" and "A-Z" should look like this:</p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 24</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet24}
             </SyntaxHighlighter>
           </div>
         </div>
