@@ -266,12 +266,32 @@ export default function App() {
   `;
 
   const snippet25 = `
-  // If typeDisplay equals "person", we display the first component, if not, we display the other component.
+  // If typeDisplay equals "person", we display the first component, if not, we display the second component.
 
-  {typeDisplay === "person" ? ( <Something/> ) : ( <SomethingElse/> )}
+  {typeDisplay === "person" ? ( <p> First Component </p> ) : ( <p> Second Component </p> )}
   `;
 
   const snippet26 = `
+  // 2 maps for each array.
+
+  // 1 for filteredPerson
+
+  filteredPerson.map((c) => (
+    <div key={c.number}>                       // We use the "number" as the unique key (it's a must!)
+      <Card name={c.name} number={c.number} /> // Here we are passing the props "name" and "number" to our Card component.
+    </div> 
+  ) 
+ 
+  // 1 for filteredCompany
+
+  filteredCompany.map((c) => (
+    <div key={c.number}>                       // We use the "number" as the unique key (it's a must!)
+      <Card name={c.name} number={c.number} /> // Here we are passing the props "name" and "number" to our Card component.
+    </div>
+  )
+  `;
+
+  const snippet30 = `
   {typeDisplay === "person" ? (
     filteredPerson.map((c) => (
       <div key={c.number}>
