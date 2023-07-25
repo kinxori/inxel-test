@@ -202,15 +202,13 @@ export default function App() {
   `;
 
   const snippet20 = `
-  function Card(props) {
+  function Card() {
     return (
       <div>
         <div>
           <h3></h3>
-          <h3>+</h3>
-          <button>
-            Delete
-          </button>
+          <h3></h3>
+          <button></button>
         </div>
       </div>
     );
@@ -676,7 +674,7 @@ export default function App() {
           <p>This is going to look like this as JSX:</p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 20</i>
+              <i className="text-black  ">Snippet 21</i>
             </div>
             <hr className="border-white border-[2px]"></hr>
             <SyntaxHighlighter
@@ -687,7 +685,32 @@ export default function App() {
               {snippet20}
             </SyntaxHighlighter>
           </div>
-          <p></p>
+          <p>
+            Alright! Now, as this is a child component. We need to receive the data we want to
+            display as props.
+          </p>
+          <p>We add the props parameter to the component.</p>
+          <p>
+            Then, based on our "data" key-value structure, we kwon we need to display the "name" and
+            the "number" of each contact.
+          </p>
+          <p>We will also need to add an "onClick" function for the "delete" action. </p>
+          <p>
+            So, in this case, everything comes from "props". So we take everything from "props".
+          </p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 21</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet21}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
     </article>
