@@ -399,8 +399,8 @@ export default function App() {
             </SyntaxHighlighter>
           </div>
           <p>
-            Now if we apply some deconstruction, we can write the next lines because both "value"
-            and "name" come from "event.target".
+            Now if we apply some deconstruction, we can write the next line because both "value" and
+            "name" come from "event.target".
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -415,14 +415,11 @@ export default function App() {
               {snippet11}
             </SyntaxHighlighter>
           </div>
+          <p>Great! Now we have to send the data entries to the "inputForm" variable we created.</p>
           <p>
-            Great! Now we have to send the data entries to the "inputForm" variable we created in
-            the "useState".
-          </p>
-          <p>
-            For this we need to call the function "setInputForm" and with the spread operator state
-            that what ever it's already in there, we are going to add the entry data from the Input
-            and Select Tags.
+            For this we need to call the function "setInputForm" and with the spread operator we
+            create a new "inputForm" (like a copy) and then, we are going to add the entry data from
+            the Input and Select Tags.
           </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -438,7 +435,7 @@ export default function App() {
             </SyntaxHighlighter>
           </div>
           <p>Again, let's break it down:</p>
-          <p>After using the Spread Operator, we have to state what we want to add.</p>
+          <p>After using the Spread Operator, we have to say what we want to add.</p>
           <p>Check it out:</p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -456,14 +453,8 @@ export default function App() {
           <p>Now, what's that weird syntaxis of "[name]: value"?</p>
           <p>Do you remember we added the "name" attribute to each Input and Select Tag? </p>
           <p>Do you remember we were going to make them dynamic?</p>
-          <p>
-            Well, as we are basically receiving/listening each one of those attributes, we can call
-            it an Array
-          </p>
-          <p>
-            And as we are saying that each one of those "name" elements has a value, we add the
-            value to each one.
-          </p>
+          <p>Well, as we are basically receiving more than 1 value, we can call it an Array.</p>
+          <p>We add the value to each one.</p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 14</i>
@@ -508,6 +499,10 @@ export default function App() {
               muted
             ></video>
           </div>
+          <p>
+            Now let's create "handleSubmit". This is were we are going to send the data received in
+            the "inputForm" and send it to the "data" variable. But here it's going to be stored.
+          </p>
         </div>
       </div>
     </article>
