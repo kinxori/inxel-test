@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 function InxelTest() {
-  const [contactsFilter, setContactsFilter] = useState("filteredPerson");
+  const [contactsFilter, setContactsFilter] = useState("person");
   const [isSorted, setIsSorted] = useState(false);
   const [inputForm, setInputData] = useState({
     name: "",
@@ -72,13 +72,13 @@ function InxelTest() {
     const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
     const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
 
-    if (contactsFilter === "filteredPerson" && !isSorted) {
+    if (contactsFilter === "person" && !isSorted) {
       return filteredPerson;
-    } else if (contactsFilter === "filteredCompany" && !isSorted) {
+    } else if (contactsFilter === "company" && !isSorted) {
       return filteredCompany;
-    } else if (contactsFilter === "filteredPerson" && isSorted) {
+    } else if (contactsFilter === "person" && isSorted) {
       return sortedPerson;
-    } else if (contactsFilter === "filteredCompany" && isSorted) {
+    } else if (contactsFilter === "company" && isSorted) {
       return sortedCompany;
     }
   };
@@ -183,17 +183,17 @@ function InxelTest() {
         <div className=" flex gap-[5px] h-[40px] justify-around  ">
           <button
             className={
-              contactsFilter === "filteredPerson" ? " bg-white text-black " : "bg-black text-white"
+              contactsFilter === "person" ? " bg-white text-black " : "bg-black text-white"
             }
-            onClick={() => handleToggle("filteredPerson")}
+            onClick={() => handleToggle("person")}
           >
             Person
           </button>
           <button
             className={
-              contactsFilter === "filteredCompany" ? " bg-white text-black " : "bg-black text-white"
+              contactsFilter === "company" ? " bg-white text-black " : "bg-black text-white"
             }
-            onClick={() => handleToggle("filteredCompany")}
+            onClick={() => handleToggle("company")}
           >
             Company
           </button>

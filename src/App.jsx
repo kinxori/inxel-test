@@ -253,7 +253,13 @@ export default function App() {
   `;
 
   const snippet24 = `
-  const [typeDisplay, setTypeDisplay] = useState("person");
+  // This will have "person" as string as the first value.
+
+  const [contactsFilter, setContactsFilter] = useState("person");
+
+  // This will have "false" as booleand as the first value.
+
+  const [isSorted, setIsSorted] = useState(false);
   `;
 
   const snippet25 = `
@@ -858,7 +864,22 @@ export default function App() {
             <li>Filtered Company Contact</li>
             <li>Sorted Company Contact</li>
           </ul>
-          <p></p>
+          <p>1 will choose to render "person" and the other "company".</p>
+          <p>2 will choose to render "person filtered" or "company filtered".</p>
+          <p>For that these "useState" will look like this:</p>
+          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 24</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet24}
+            </SyntaxHighlighter>
+          </div>
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
