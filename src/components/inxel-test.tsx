@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 function InxelTest() {
-  const [typeDisplay, setTypeDisplay] = useState("person");
+  const [contactsFilter, setContactsFilter] = useState("filteredPerson");
   const [isSorted, setIsSorted] = useState(false);
   const [inputForm, setInputData] = useState({
     name: "",
@@ -55,15 +55,12 @@ function InxelTest() {
   };
 
   const handleToggle = (filtered) => {
-    SetContactsFilter(filtered);
+    setContactsFilter(filtered);
   };
 
   const handleSorted = (boolean) => {
-    SetContactsSorted((current) => (current !== boolean ? boolean : false));
+    setIsSorted((current) => (current !== boolean ? boolean : false));
   };
-
-  const [contactsFilter, SetContactsFilter] = useState("filteredPerson");
-  const [contactsSorted, SetContactsSorted] = useState(false);
 
   const personType = () => {
     const filteredPerson = data.filter((item) => {
@@ -75,13 +72,13 @@ function InxelTest() {
     const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
     const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
 
-    if (contactsFilter === "filteredPerson" && !contactsSorted) {
+    if (contactsFilter === "filteredPerson" && !isSorted) {
       return filteredPerson;
-    } else if (contactsFilter === "filteredCompany" && !contactsSorted) {
+    } else if (contactsFilter === "filteredCompany" && !isSorted) {
       return filteredCompany;
-    } else if (contactsFilter === "filteredPerson" && contactsSorted) {
+    } else if (contactsFilter === "filteredPerson" && isSorted) {
       return sortedPerson;
-    } else if (contactsFilter === "filteredCompany" && contactsSorted) {
+    } else if (contactsFilter === "filteredCompany" && isSorted) {
       return sortedCompany;
     }
   };
@@ -202,7 +199,7 @@ function InxelTest() {
           </button>
           <button
             onClick={() => handleSorted(true)}
-            className={contactsSorted ? " bg-white text-black  " : " bg-black text-white "}
+            className={isSorted ? " bg-white text-black  " : " bg-black text-white "}
           >
             A-Z
           </button>
