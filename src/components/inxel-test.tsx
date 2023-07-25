@@ -54,21 +54,39 @@ function InxelTest() {
     setData((prevData) => prevData.filter((card) => card.number !== id));
   };
 
-  const handleAlphabetic = () => {
-    setIsSorted(!isSorted);
+  const handleToggle = (filtered) => {
+    SetContactsFilter(filtered);
   };
 
-  const filteredPerson = data.filter((item) => {
-    return item.type === "person";
-  });
+  const handleSorted = (boolean) => {
+    SetContactsSorted((current) => (current !== boolean ? boolean : false));
+  };
 
-  const filteredCompany = data.filter((item) => {
-    return item.type === "company";
-  });
+  const [contactsFilter, SetContactsFilter] = useState("filteredPerson");
+  const [contactsSorted, SetContactsSorted] = useState(false);
 
-  const sortedPersonArray = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+  const personType = () => {
+    const filteredPerson = data.filter((item) => {
+      return item.type === "person";
+    });
+    const filteredCompany = data.filter((item) => {
+      return item.type === "company";
+    });
+    const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+    const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
 
-  const sortedCompanyArray = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
+    if (contactsFilter === "filteredPerson" && !contactsSorted) {
+      return filteredPerson;
+    } else if (contactsFilter === "filteredCompany" && !contactsSorted) {
+      return filteredCompany;
+    } else if (contactsFilter === "filteredPerson" && contactsSorted) {
+      return sortedPerson;
+    } else if (contactsFilter === "filteredCompany" && contactsSorted) {
+      return sortedCompany;
+    }
+  };
+
+  const filtereData = personType();
 
   return (
     <article
@@ -103,6 +121,7 @@ function InxelTest() {
             rounded-[10px]
             pl-[10px]
             bg-white
+            text-black
             placeholder:text-[rgba(0,0,0,.5)]
             "
           ></input>
@@ -118,6 +137,7 @@ function InxelTest() {
             rounded-[10px]
             pl-[10px]
             bg-white
+            text-black
             placeholder:text-[rgba(0,0,0,.5)]
             "
           ></input>
@@ -165,54 +185,34 @@ function InxelTest() {
       >
         <div className=" flex gap-[5px] h-[40px] justify-around  ">
           <button
-            className={typeDisplay === "person" ? " bg-white text-black " : "bg-black text-white"}
-            onClick={() => setTypeDisplay("person")}
+            className={
+              contactsFilter === "filteredPerson" ? " bg-white text-black " : "bg-black text-white"
+            }
+            onClick={() => handleToggle("filteredPerson")}
           >
             Person
           </button>
           <button
-            className={typeDisplay === "company" ? " bg-white text-black " : "bg-black text-white"}
-            onClick={() => setTypeDisplay("company")}
+            className={
+              contactsFilter === "filteredCompany" ? " bg-white text-black " : "bg-black text-white"
+            }
+            onClick={() => handleToggle("filteredCompany")}
           >
             Company
           </button>
           <button
-            onClick={handleAlphabetic}
-            className={isSorted ? " bg-white text-black  " : " bg-black text-white "}
+            onClick={() => handleSorted(true)}
+            className={contactsSorted ? " bg-white text-black  " : " bg-black text-white "}
           >
             A-Z
           </button>
         </div>
         <div className="flex flex-col gap-[5px] overflowY-auto      ">
-          {typeDisplay === "person" ? (
-            <>
-              {isSorted
-                ? sortedPersonArray.map((c) => (
-                    <div key={c.number}>
-                      <Card name={c.name} number={c.number} handleDelete={handleDelete} />
-                    </div>
-                  ))
-                : filteredPerson.map((c) => (
-                    <div key={c.number}>
-                      <Card name={c.name} number={c.number} handleDelete={handleDelete} />
-                    </div>
-                  ))}
-            </>
-          ) : (
-            <>
-              {isSorted
-                ? sortedCompanyArray.map((c) => (
-                    <div key={c.number}>
-                      <Card name={c.name} number={c.number} handleDelete={handleDelete} />
-                    </div>
-                  ))
-                : filteredCompany.map((c) => (
-                    <div key={c.number}>
-                      <Card name={c.name} number={c.number} handleDelete={handleDelete} />
-                    </div>
-                  ))}
-            </>
-          )}
+          {filtereData?.map((c) => (
+            <div key={c.number}>
+              <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+            </div>
+          ))}
         </div>
       </div>
     </article>

@@ -907,6 +907,10 @@ export default function App() {
               {snippet27}
             </SyntaxHighlighter>
           </div>
+          <p>
+            At this point your componet should be working. We just need to add the logic to sort the
+            list of cards and add the logic to the "delete" button.
+          </p>
         </div>
       </div>
     </article>
