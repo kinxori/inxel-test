@@ -265,6 +265,28 @@ export default function App() {
   </div>
   `;
 
+  const snippet25 = `
+  // If typeDisplay equals "person", we display the first component, if not, we display the other component.
+
+  {typeDisplay === "person" ? ( <Something/> ) : ( <SomethingElse/> )}
+  `;
+
+  const snippet26 = `
+  {typeDisplay === "person" ? (
+    filteredPerson.map((c) => (
+      <div key={c.number}>
+        <Card name={c.name} number={c.number} />
+      </div> 
+    )      
+  ) : (
+    filteredCompany.map((c) => (
+      <div key={c.number}>
+        <Card name={c.name} number={c.number} />
+      </div>
+    )
+  )}
+  `;
+
   const snippet = `
   function Card(props) {
     return (
@@ -806,6 +828,23 @@ export default function App() {
               showLineNumbers
             >
               {snippet24}
+            </SyntaxHighlighter>
+          </div>
+          <p>
+            Having the toggle working, we can create a conditional rendering based on our
+            "typeDisplay" value.
+          </p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 25</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet25}
             </SyntaxHighlighter>
           </div>
         </div>
