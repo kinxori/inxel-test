@@ -201,6 +201,22 @@ export default function App() {
   }
   `;
 
+  const snippet20 = `
+  function Card(props) {
+    return (
+      <div>
+        <div>
+          <h3>{props.name}</h3>
+          <h3>+ {props.number}</h3>
+          <button onClick={() => props.handleDelete(props.number)}>
+            Delete
+          </button>
+        </div>
+      </div>
+    );
+  }
+  `;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className=" flex flex-col gap-5">
@@ -614,10 +630,26 @@ export default function App() {
             We are missing the logic to display our new entries as cards. We are missing the filter
             to select "person" or "company" type of contact. Also the "A-Z" sort button.
           </p>
+        </div>
+        <div className="flex flex-col gap-6 ">
+          <h3 className="text-[20px] leading-[16px] font-bold   ">Step #4</h3>
           <p>
             Let's start creating our Card component. As we are working with React, this is going to
             use composition.
           </p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 20</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet1}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
     </article>
