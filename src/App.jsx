@@ -291,7 +291,7 @@ export default function App() {
   )
   `;
 
-  const snippet30 = `
+  const snippet27 = `
   {typeDisplay === "person" ? (
     filteredPerson.map((c) => (
       <div key={c.number}>
@@ -887,6 +887,24 @@ export default function App() {
               showLineNumbers
             >
               {snippet26}
+            </SyntaxHighlighter>
+          </div>
+          <p>
+            Each "map" will display all the data from the filter as cards, now let's mix it with our
+            conditional display we had below.
+          </p>
+          <p>Your conditional display should look something like this:</p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 27</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet27}
             </SyntaxHighlighter>
           </div>
         </div>
