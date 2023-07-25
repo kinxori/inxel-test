@@ -206,8 +206,40 @@ export default function App() {
     return (
       <div>
         <div>
-          <h3>{props.name}</h3>
-          <h3>+ {props.number}</h3>
+          <h3></h3>
+          <h3>+</h3>
+          <button>
+            Delete
+          </button>
+        </div>
+      </div>
+    );
+  }
+  `;
+
+  const snippet21 = `
+  function Card(props) {
+    return (
+      <div>
+        <div>
+          <h3> {props.name} </h3>
+          <h3> +{props.number} </h3>
+          <button onClick={null}>
+            Delete
+          </button>
+        </div>
+      </div>
+    );
+  }
+  `;
+
+  const snippet22 = `
+  function Card(props) {
+    return (
+      <div>
+        <div>
+          <h3> {props.name} </h3>
+          <h3>+ {props.number} </h3>
           <button onClick={() => props.handleDelete(props.number)}>
             Delete
           </button>
@@ -641,6 +673,7 @@ export default function App() {
             This is going to help us re-use the same Card component but update the data we diplay as
             we wish.
           </p>
+          <p>This is going to look like this as JSX:</p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 20</i>
@@ -654,6 +687,7 @@ export default function App() {
               {snippet20}
             </SyntaxHighlighter>
           </div>
+          <p></p>
         </div>
       </div>
     </article>
