@@ -248,13 +248,13 @@ export default function App() {
   const snippet24 = `
   <div>
     <button
-      className={typeDisplay === "person" ? "classActive" : "classIdle"}
+      className={typeDisplay === "person" ? "activeClass" : "idleClass"}
       onClick={() => setTypeDisplay("person")}
     >
       Person
     </button>
     <button
-      className={typeDisplay === "company" ? "classActive" : "classIdle"}
+      className={typeDisplay === "company" ? "activeClass" : "idleClass"}
       onClick={() => setTypeDisplay("company")}
     >
       Company
@@ -788,7 +788,13 @@ export default function App() {
               {snippet23}
             </SyntaxHighlighter>
           </div>
-          <p>Your Buttons to toggle between "Person", "Company" and "A-Z" should look like this:</p>
+          <p>
+            Then we add a conditional ternary to each "className" attribute to toggle between an
+            "activeClass" and "idleClass". Also we will add the logic each "onClick" attribute to
+            update the "typeDisplay" depending on what we want to display, either "Person" or
+            "Company".
+          </p>
+          <p>Your Buttons to toggle between "Person", "Company" should look like this:</p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 24</i>
