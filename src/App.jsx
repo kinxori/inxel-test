@@ -867,6 +867,28 @@ export default function App() {
               {snippet25}
             </SyntaxHighlighter>
           </div>
+          <p>
+            Now let's start using our Card component. We will use the array method "map" to display
+            each object in the same composition component. But we will create 2 maps, 1 for our
+            "filteredPerson" variable and 1 for our "filteredCompany" variable.
+          </p>
+          <p>
+            Inside each "map", we will add the component "Card" and pass the props we said before we
+            will be receiving in our child component.
+          </p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 26</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet26}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
     </article>
