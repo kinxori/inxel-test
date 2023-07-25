@@ -586,9 +586,12 @@ export default function App() {
           <p>Finally we are going to decide what to do with the click event.</p>
           <p>In this case we want to have a ternary. We are going to ask:</p>
           <ul className="list-disc pl-[30px]">
-            <li>name</li>
-            <li>number</li>
-            <li>type</li>
+            <li>1.- If both Inputs are empty, when click event is triggered do nothing.</li>
+            <li>2.- If both are filled, add that new data entry in "inputForm" to "data".</li>
+            <li>
+              3.- After that, we clear restore the values in Input and Select to their original
+              state.
+            </li>
           </ul>
         </div>
       </div>
