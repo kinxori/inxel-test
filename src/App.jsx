@@ -169,6 +169,38 @@ export default function App() {
   <select name="type" value={inputForm.type} onChange={handleChange}>
 `;
 
+  const snippet16 = `
+  const handleSubmit = () => {}
+  `;
+
+  const snippet17 = `
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  }
+  `;
+
+  const snippet18 = `
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+    const newEntry = { ...inputForm };
+  }
+  `;
+
+  const snippet19 = `
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+    // const newEntry = { ...inputForm };
+    if (inputForm.name && inputForm.number !== "") {
+      setData((prevData) => [...prevData, newEntry]);
+      setInputData({
+        name: "",
+        number: "",
+        type: "person",
+      });
+    } else null;
+  }
+  `;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className=" flex flex-col gap-5">
@@ -503,6 +535,20 @@ export default function App() {
             Now let's create "handleSubmit". This is were we are going to send the data received in
             the "inputForm" and send it to the "data" variable. But here it's going to be stored.
           </p>
+          <p>Let's start by creating the function:</p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 16</i>
+            </div>
+            <hr className="border-black border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet16}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
     </article>
