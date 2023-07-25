@@ -232,6 +232,16 @@ export default function App() {
   `;
 
   const snippet22 = `
+  const filteredPerson = data.filter((item) => {
+    return item.type === "person";
+  });
+
+  const filteredCompany = data.filter((item) => {
+    return item.type === "company";
+  });
+  `;
+
+  const snippet = `
   function Card(props) {
     return (
       <div>
@@ -709,6 +719,24 @@ export default function App() {
               showLineNumbers
             >
               {snippet21}
+            </SyntaxHighlighter>
+          </div>
+          <p>
+            Now we can use it in our parent component and pass the corresponding props to the child
+            component!
+          </p>
+          <p>But first...!</p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 22</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet22}
             </SyntaxHighlighter>
           </div>
         </div>
