@@ -726,6 +726,15 @@ export default function App() {
             component!
           </p>
           <p>But first...!</p>
+          <p>We need to start with the filtering of the data.</p>
+          <p>
+            Each object has a key-value called "type", this is where we can filter them by "person"
+            or "company".
+          </p>
+          <p>
+            For this project we are going to create 2 new variables that will store each object with
+            "person" or "company" types only.
+          </p>
           <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 22</i>
