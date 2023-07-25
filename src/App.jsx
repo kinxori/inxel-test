@@ -606,6 +606,10 @@ export default function App() {
               {snippet19}
             </SyntaxHighlighter>
           </div>
+          <p>
+            By this point our Form should be working 100%. The Inputs and Select Tags are
+            controllable. The Button Tag sends the data to our chosen variable.
+          </p>
         </div>
       </div>
     </article>
