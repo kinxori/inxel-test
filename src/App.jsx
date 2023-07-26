@@ -2,6 +2,7 @@ import InxelTest from "./components/inxel-test";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import asset1 from "./assets/inxel-test-asset-1.mp4";
 import asset2 from "./assets/inxel-test-asset-2.mp4";
+import asset3 from "./assets/inxel-test-asset-3.mp4";
 
 export default function App() {
   const snippet1 = `  
@@ -1079,6 +1080,39 @@ export default function App() {
               {snippet31}
             </SyntaxHighlighter>
           </div>
+          <p>
+            Now we use it in our "Card" component and pass the "number" to the function. This will
+            be receive as the "id".
+          </p>
+          <p>Remeber to add it on the "onClick" attribute.</p>
+          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 32</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet32}
+            </SyntaxHighlighter>
+          </div>
+          <p>If everything is correct, our component is complete!!</p>
+          <p>Let's test it out</p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px] my-5  ">
+            <video
+              src={asset3}
+              loop
+              autoPlay
+              controls
+              disablePictureInPicture
+              disableRemotePlayback
+              controlsList="nodownload noremoteplayback noplaybackrate "
+              muted
+            ></video>
+          </div>
+          <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Congrats! 😮‍💨</h3>
         </div>
       </div>
     </article>
