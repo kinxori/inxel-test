@@ -327,19 +327,24 @@ export default function App() {
   `;
 
   const snippet28 = `
-  {typeDisplay === "person" ? (
-    filteredPerson.map((c) => (
-      <div key={c.number}>
-        <Card name={c.name} number={c.number} />
-      </div> 
-    )      
-  ) : (
-    filteredCompany.map((c) => (
-      <div key={c.number}>
-        <Card name={c.name} number={c.number} />
-      </div>
-    )
-  )}
+  <button
+    className={contactsFilter === "person" ? "activeClass" : "idleClass"}   // We use the value in "contactFilter" to toggle between classes
+    onClick={() => handleToggle("person")}    // We use an anonymus function to pass the value we are waiting in "handleToggle"
+  >
+    Person
+  </button>
+  <button 
+    className={contactsCompany === "person" ? "activeClass" : "idleClass"}   // We use the value in "contactFilter" to toggle between classes
+   onClick={() => handleToggle("company")}    // We use an anonymus function to pass the value we are waiting in "handleToggle"
+ >
+    Company
+ </button>
+ <button
+    className={isSorted ? "activeClass" : "idleClass"}    // We use the value in "isSorted" to toggle between classes
+    onClick={handleSorted}    // We just call the function "handleSorted".
+ >
+    A-Z
+ </button>
   `;
 
   const snippet = `
@@ -952,64 +957,25 @@ export default function App() {
             </SyntaxHighlighter>
           </div>
           <p>Let's use them!</p>
+          <p>For this we have to go to our Button Tags we created for this purpose.</p>
+          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 28</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet28}
+            </SyntaxHighlighter>
+          </div>
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
           <p>🤡🤡🤡🤡🤡----------------------------------------------🤡🤡🤡🤡🤡</p>
-          <p>Let's create the toggle for the Buttons "Person" or "Company".</p>
-          <p>This is going to be a simple "useState" that toggles depending on the "type".</p>
-          <p>As for this "useState", this will start with "person" string as the first value.</p>
-          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
-            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 23</i>
-            </div>
-            <hr className="border-white border-[2px]"></hr>
-            <SyntaxHighlighter
-              language="text"
-              customStyle={{ background: "black", color: "white" }}
-              showLineNumbers
-            >
-              {snippet23}
-            </SyntaxHighlighter>
-          </div>
-          <p>
-            Then we add a conditional ternary to each "className" attribute to toggle between an
-            "activeClass" and "idleClass". Also we will add the logic each "onClick" attribute to
-            update the "typeDisplay" depending on what we want to display, either "Person" or
-            "Company".
-          </p>
-          <p>Your Buttons to toggle between "Person", "Company" should look like this:</p>
-          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
-            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 24</i>
-            </div>
-            <hr className="border-white border-[2px]"></hr>
-            <SyntaxHighlighter
-              language="text"
-              customStyle={{ background: "black", color: "white" }}
-              showLineNumbers
-            >
-              {snippet24}
-            </SyntaxHighlighter>
-          </div>
-          <p>
-            Having the toggle working, we can create a conditional rendering based on our
-            "typeDisplay" value.
-          </p>
-          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
-            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 25</i>
-            </div>
-            <hr className="border-white border-[2px]"></hr>
-            <SyntaxHighlighter
-              language="text"
-              customStyle={{ background: "black", color: "white" }}
-              showLineNumbers
-            >
-              {snippet25}
-            </SyntaxHighlighter>
-          </div>
           <p>
             Now let's start using our Card component. We will use the array method "map" to display
             each object in the same composition component. But we will create 2 maps, 1 for our
