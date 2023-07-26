@@ -347,20 +347,14 @@ export default function App() {
  </button>
   `;
 
-  const snippet = `
-  function Card(props) {
-    return (
-      <div>
-        <div>
-          <h3> {props.name} </h3>
-          <h3>+ {props.number} </h3>
-          <button onClick={() => props.handleDelete(props.number)}>
-            Delete
-          </button>
-        </div>
+  const snippet29 = `
+  <div>
+    {filtereData?.map((c) => (    // We add the "chain Operator" to prevent failures if the data is not loaded yet
+      <div key={c.number}>        // We add a unique "key" which will come from our "number" value of each object
+        <Card name={c.name} number={c.number} />  // Finally we pass the props to our "Card" component
       </div>
-    );
-  }
+    ))}
+  </div>
   `;
 
   return (
@@ -971,23 +965,21 @@ export default function App() {
               {snippet28}
             </SyntaxHighlighter>
           </div>
-          {/* Step here  ------------------------------------*/}
-          {/* Step here  ------------------------------------*/}
-          {/* Step here  ------------------------------------*/}
-          {/* Step here  ------------------------------------*/}
-          <p>🤡🤡🤡🤡🤡----------------------------------------------🤡🤡🤡🤡🤡</p>
           <p>
             Now let's start using our Card component. We will use the array method "map" to display
-            each object in the same composition component. But we will create 2 maps, 1 for our
-            "filteredPerson" variable and 1 for our "filteredCompany" variable.
+            each object in the same composition component.
           </p>
           <p>
-            Inside each "map", we will add the component "Card" and pass the props we said before we
+            We are going to map our "filteredData" variable, remember, this variable has the data we
+            decide to render with our buttons.
+          </p>
+          <p>
+            Inside our "map", we will add the component "Card" and pass the props we said before we
             will be receiving in our child component.
           </p>
           <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 26</i>
+              <i className="text-black  ">Snippet 29</i>
             </div>
             <hr className="border-white border-[2px]"></hr>
             <SyntaxHighlighter
@@ -995,17 +987,14 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet26}
+              {snippet29}
             </SyntaxHighlighter>
           </div>
-          <p>
-            Each "map" will display all the data from the filter as cards, now let's mix it with our
-            conditional display we had below.
-          </p>
-          <p>Your conditional display should look something like this:</p>
+          <p>Each "map" will display all objects from our "filtereData" variable as cards.</p>
+          <p>Your project should be working like this:</p>
           <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-              <i className="text-black  ">Snippet 27</i>
+              <i className="text-black  ">Snippet 30</i>
             </div>
             <hr className="border-white border-[2px]"></hr>
             <SyntaxHighlighter
@@ -1016,10 +1005,7 @@ export default function App() {
               {snippet27}
             </SyntaxHighlighter>
           </div>
-          <p>
-            At this point your componet should be working. We just need to add the logic to sort the
-            list of cards and add the logic to the "delete" button.
-          </p>
+          <p>At this point your componet just</p>
         </div>
       </div>
     </article>
