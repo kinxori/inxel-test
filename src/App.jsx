@@ -27,16 +27,16 @@ export default function App() {
           This is running in a local enviorment with hard-coded data. This was a project requirment
           but you can fetch any API to add real data.
         </p>
-        <div>
-          <div>
+        <div className="w-[100%] m-[0 auto]  ">
+          <div className="flex gap-1 ">
             <div>
               <button>Beginner</button>
             </div>
             <div>
-              <button>Intermediate</button>
+              <button>Mid-Level</button>
             </div>
             <div>
-              <button>Just Code</button>
+              <button>Code</button>
             </div>
           </div>
           <div>
