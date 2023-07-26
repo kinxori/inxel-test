@@ -27,6 +27,28 @@ export default function App() {
           This is running in a local enviorment with hard-coded data. This was a project requirment
           but you can fetch any API to add real data.
         </p>
+        <div
+          className="    
+                rounded-[10px] 
+                border-[2px] 
+                border-white 
+                my-5
+                bg-black
+                overflow-hidden
+                drop-shadow-[12px_12px_0px_rgba(0,0,0,1)]
+                box-border
+                p-[15px]
+                flex
+                flex-col
+                gap-2
+                "
+        >
+          <h3 className="text-[24px] underline leading-[24px] font-bold ">Hey!</h3>
+          <p>
+            If you want to see the process of this component, choose a level below and check it out!
+            👇
+          </p>
+        </div>
         <div className="w-[100%] my-5 mx-auto">
           <div className="flex gap-1 justify-evenly ">
             <div>
@@ -45,28 +67,8 @@ export default function App() {
               </button>
             </div>
           </div>
-          <div className="my-5     ">
-            {panel === "" ? (
-              <div
-                className="    
-                rounded-[10px] 
-                border-[2px] 
-                border-white 
-                my-10
-                bg-black
-                overflow-hidden
-                drop-shadow-[12px_12px_0px_rgba(0,0,0,1)]
-                box-border
-                p-5
-                "
-              >
-                <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Hey!</h3>
-                <p>
-                  If you want to see the process of this component, choose a level below and check
-                  it out! 👆
-                </p>
-              </div>
-            ) : panel === "beginner" ? (
+          <div className="my-5    ">
+            {panel === "beginner" ? (
               <BegginerLevel />
             ) : panel === "mid-level" ? (
               <div> Intermediate </div>
