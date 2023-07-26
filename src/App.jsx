@@ -30,24 +30,24 @@ export default function App() {
         <div className="w-[100%] my-5 mx-auto">
           <div className="flex gap-1 justify-evenly ">
             <div>
-              <button>Beginner</button>
+              <button onClick={() => setPanel("beginner")}>Beginner</button>
             </div>
             <div>
-              <button>Mid-Level</button>
+              <button onClick={() => setPanel("mid-level")}>Mid-Level</button>
             </div>
             <div>
-              <button>Code</button>
+              <button onClick={() => setPanel("code")}>Code</button>
             </div>
           </div>
           <div className="my-5     ">
             {panel === "" ? (
               <div>Choose a level!</div>
-            ) : panel === "begginer" ? (
+            ) : panel === "beginner" ? (
               <BegginerLevel />
-            ) : panel === "intermediate" ? (
+            ) : panel === "mid-level" ? (
               <div> Intermediate </div>
             ) : (
-              panel === "justCode" && <div>Just code </div>
+              panel === "code" && <div>Just code </div>
             )}
           </div>
         </div>
