@@ -1,7 +1,10 @@
 import InxelTest from "./components/inxel-test";
 import BegginerLevel from "./components/begginer-level";
+import { useState } from "react";
 
 export default function App() {
+  const [panel, setPanel] = useState("");
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className=" flex flex-col">
@@ -24,7 +27,30 @@ export default function App() {
           This is running in a local enviorment with hard-coded data. This was a project requirment
           but you can fetch any API to add real data.
         </p>
-        <BegginerLevel />
+        <div>
+          <div>
+            <div>
+              <button>Beginner</button>
+            </div>
+            <div>
+              <button>Intermediate</button>
+            </div>
+            <div>
+              <button>Just Code</button>
+            </div>
+          </div>
+          <div>
+            {panel === "" ? (
+              <div>Choose a level!</div>
+            ) : panel === "begginer" ? (
+              <BegginerLevel />
+            ) : panel === "intermediate" ? (
+              <div> Intermediate </div>
+            ) : (
+              panel === "justCode" && <div>Just code </div>
+            )}
+          </div>
+        </div>
       </div>
     </article>
   );
