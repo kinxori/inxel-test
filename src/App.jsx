@@ -1,7 +1,7 @@
 import InxelTest from "./components/inxel-test";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import asset1 from "./assets/inxel-test-asset-1.mp4";
+import asset2 from "./assets/inxel-test-asset-2.mp4";
 
 export default function App() {
   const snippet1 = `  
@@ -223,7 +223,7 @@ export default function App() {
           <h3> {props.name} </h3>
           <h3> +{props.number} </h3>
           <button onClick={null}>
-            Delete
+            Remove
           </button>
         </div>
       </div>
@@ -232,9 +232,13 @@ export default function App() {
   `;
 
   const snippet22 = `
+  // Here we filtering to only have objects with "type = person"
+
   const filteredPerson = data.filter((item) => {
     return item.type === "person";
   });
+
+  // Here we filtering to only have objects with "type = company"
 
   const filteredCompany = data.filter((item) => {
     return item.type === "company";
@@ -679,7 +683,7 @@ export default function App() {
             Your Form should be controllable and at the same time updating the data inside your
             "inputForm" variable.
           </p>
-          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px] my-5  ">
             <video
               src={asset1}
               loop
@@ -992,6 +996,30 @@ export default function App() {
           </div>
           <p>Each "map" will display all objects from our "filtereData" variable as cards.</p>
           <p>Your project should be working like this:</p>
+          <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px] my-5  ">
+            <video
+              src={asset2}
+              loop
+              autoPlay
+              controls
+              disablePictureInPicture
+              disableRemotePlayback
+              controlsList="nodownload noremoteplayback noplaybackrate "
+              muted
+            ></video>
+          </div>
+          <p>
+            Finally but not least, we need to add the logic to delete each card using its Button
+            Tag.
+          </p>
+          <p>
+            For this we will create another function in the parent component to handle the "Remove"
+            click.
+          </p>
+          <p>
+            This function will be passed as a prop to "Card" component and used in the "onClick"
+            attribute.
+          </p>
           <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 30</i>

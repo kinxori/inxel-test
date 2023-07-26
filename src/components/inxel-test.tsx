@@ -250,7 +250,7 @@ function Card(props) {
         text-white
         "
         >
-          Delete
+          Remove
         </button>
       </div>
     </div>
