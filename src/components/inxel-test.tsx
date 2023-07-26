@@ -58,8 +58,8 @@ function InxelTest() {
     setContactsFilter(filtered);
   };
 
-  const handleSorted = (boolean) => {
-    setIsSorted((current) => (current !== boolean ? boolean : false));
+  const handleSorted = () => {
+    setIsSorted(!isSorted);
   };
 
   const personType = () => {
@@ -198,7 +198,7 @@ function InxelTest() {
             Company
           </button>
           <button
-            onClick={() => handleSorted(true)}
+            onClick={handleSorted}
             className={isSorted ? " bg-white text-black  " : " bg-black text-white "}
           >
             A-Z

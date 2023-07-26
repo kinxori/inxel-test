@@ -313,23 +313,17 @@ export default function App() {
   `;
 
   const snippet27 = `
-  // 2 maps for each array.
+  // This is calling the "setContactsFilter" and updating its value to the parameter we receive as "filtered".
 
-  // 1 for filteredPerson
+  const handleToggle = (filtered) => {
+    setContactsFilter(filtered);
+  };
 
-  filteredPerson.map((c) => (
-    <div key={c.number}>                       // We use the "number" as the unique key (it's a must!)
-      <Card name={c.name} number={c.number} /> // Here we are passing the props "name" and "number" to our Card component.
-    </div> 
-  ) 
- 
-  // 1 for filteredCompany
+  // This is just a simple toggle between "true" or "false". No need to receive any parameter.
 
-  filteredCompany.map((c) => (
-    <div key={c.number}>                       // We use the "number" as the unique key (it's a must!)
-      <Card name={c.name} number={c.number} /> // Here we are passing the props "name" and "number" to our Card component.
-    </div>
-  )
+  const handleSorted = () => {
+    setIsSorted(!isSorted);
+  };
   `;
 
   const snippet28 = `
@@ -937,6 +931,27 @@ export default function App() {
               {snippet26}
             </SyntaxHighlighter>
           </div>
+          <p>By this point we are really close to finish this project.</p>
+          <p>
+            Let's start creating the functions to handle the toggle between "person" and "company".
+          </p>
+          <p>
+            Then we can create the function to toggle between "sorted" or the original variable.
+          </p>
+          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 27</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet27}
+            </SyntaxHighlighter>
+          </div>
+          <p>Let's use them!</p>
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
