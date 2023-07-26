@@ -1037,10 +1037,13 @@ export default function App() {
             click.
           </p>
           <p>
-            This function will be passed as a prop to "Card" component and used in the "onClick"
-            attribute.
+            We need to receive a parameter, this will be a unique parameter depending on which card
+            has been clicked.
           </p>
-          <p></p>
+          <p>
+            Then we need to update our source data with the new array excluding the clicked card.
+          </p>
+          <p>Your "handleDelete" function should look like this:</p>
           <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 30</i>
@@ -1054,6 +1057,10 @@ export default function App() {
               {snippet30}
             </SyntaxHighlighter>
           </div>
+          <p>
+            This function will be passed as a prop to "Card" component and used in the "onClick"
+            attribute.
+          </p>
           <p>At this point your componet just</p>
         </div>
       </div>
