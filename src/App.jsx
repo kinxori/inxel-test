@@ -263,29 +263,53 @@ export default function App() {
   `;
 
   const snippet25 = `
-  <div>
-    <button
-      className={typeDisplay === "person" ? "activeClass" : "idleClass"}
-      onClick={() => setTypeDisplay("person")}
-    >
-      Person
-    </button>
-    <button
-      className={typeDisplay === "company" ? "activeClass" : "idleClass"}
-      onClick={() => setTypeDisplay("company")}
-    >
-      Company
-    </button>
-    <button onClick={null} className={null}>
-      A-Z
-    </button>
-  </div>
+  // We place our 4 variables inside this function
+
+  const personType = () => {
+
+     const filteredPerson = data.filter((item) => {
+      return item.type === "person";
+     });
+
+    const filteredCompany = data.filter((item) => {
+      return item.type === "company";
+    });
+
+    const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+
+    const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
+
+  };
   `;
 
   const snippet26 = `
-  // If typeDisplay equals "person", we display the first component, if not, we display the second component.
+  const personType = () => {
 
-  {typeDisplay === "person" ? ( <p> First Component </p> ) : ( <p> Second Component </p> )}
+    // const filteredPerson = data.filter((item) => {
+    //   return item.type === "person";
+    // });
+    // const filteredCompany = data.filter((item) => {
+    //   return item.type === "company";
+    // });
+   // const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+   // const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
+
+  // Here we ask which of our 4 options will be returned. Only 1 will be returned based on our 2 "useState" we created recently.
+
+    if (contactsFilter === "person" && !isSorted) {
+      return filteredPerson;
+    } else if (contactsFilter === "company" && !isSorted) {
+      return filteredCompany;
+    } else if (contactsFilter === "person" && isSorted) {
+      return sortedPerson;
+    } else if (contactsFilter === "company" && isSorted) {
+      return sortedCompany;
+    }
+  };
+
+  // Finally we call the function and store its value in a new variable.
+
+  const filtereData = personType();
   `;
 
   const snippet27 = `
@@ -880,10 +904,44 @@ export default function App() {
               {snippet24}
             </SyntaxHighlighter>
           </div>
+          <p>We need a function where we can decide which of our 4 options we will return.</p>
+          <p>Check it out!</p>
+          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 25</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet25}
+            </SyntaxHighlighter>
+          </div>
+          <p>
+            Then we add the conditional to decide which one will be the output depending on our 2
+            "useState".
+          </p>
+          <p>Notice how we are using both of the "useState" we created.</p>
+          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 26</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet26}
+            </SyntaxHighlighter>
+          </div>
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
           {/* Step here  ------------------------------------*/}
+          <p>🤡🤡🤡🤡🤡----------------------------------------------🤡🤡🤡🤡🤡</p>
           <p>Let's create the toggle for the Buttons "Person" or "Company".</p>
           <p>This is going to be a simple "useState" that toggles depending on the "type".</p>
           <p>As for this "useState", this will start with "person" string as the first value.</p>
