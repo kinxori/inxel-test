@@ -361,6 +361,26 @@ export default function App() {
   </div>
   `;
 
+  const snippet30 = `
+  const handleDelete = (id) => {    // "id" is going to be our unique identifier, in this case this value comes from the "number" of each object
+    setData((prevData) => prevData.filter((card) => card.number !== id));   // Here we update the source data exluding the passed "id"
+  };
+  `;
+
+  const snippet31 = `
+  // Here we pass the whole function as a prop to "Card" component.
+
+  <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+  `;
+
+  const snippet32 = `
+  <button
+    onClick={() => props.handleDelete(props.number)}    // We use the "handleDelete" function we receive and pass the "number" of the clicked card
+  >
+    Remove
+  </button>
+  `;
+
   return (
     <article className="w-[80%] mx-auto my-20  font-[Rubik] ">
       <div className=" flex flex-col">
@@ -1020,6 +1040,7 @@ export default function App() {
             This function will be passed as a prop to "Card" component and used in the "onClick"
             attribute.
           </p>
+          <p></p>
           <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
             <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
               <i className="text-black  ">Snippet 30</i>
@@ -1030,7 +1051,7 @@ export default function App() {
               customStyle={{ background: "black", color: "white" }}
               showLineNumbers
             >
-              {snippet27}
+              {snippet30}
             </SyntaxHighlighter>
           </div>
           <p>At this point your componet just</p>
