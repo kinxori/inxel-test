@@ -27,8 +27,8 @@ export default function App() {
           This is running in a local enviorment with hard-coded data. This was a project requirment
           but you can fetch any API to add real data.
         </p>
-        <div className="w-[100%] m-[0 auto]  ">
-          <div className="flex gap-1 ">
+        <div className="w-[100%] my-5 mx-auto">
+          <div className="flex gap-1 justify-evenly ">
             <div>
               <button>Beginner</button>
             </div>
@@ -39,7 +39,7 @@ export default function App() {
               <button>Code</button>
             </div>
           </div>
-          <div>
+          <div className="my-5     ">
             {panel === "" ? (
               <div>Choose a level!</div>
             ) : panel === "begginer" ? (
