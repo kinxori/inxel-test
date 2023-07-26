@@ -30,18 +30,42 @@ export default function App() {
         <div className="w-[100%] my-5 mx-auto">
           <div className="flex gap-1 justify-evenly ">
             <div>
-              <button onClick={() => setPanel("beginner")}>Beginner</button>
+              <button onClick={() => setPanel("beginner")} className="bg-black text-white">
+                Beginner
+              </button>
             </div>
             <div>
-              <button onClick={() => setPanel("mid-level")}>Mid-Level</button>
+              <button onClick={() => setPanel("mid-level")} className="bg-black text-white">
+                Mid-Level
+              </button>
             </div>
             <div>
-              <button onClick={() => setPanel("code")}>Code</button>
+              <button onClick={() => setPanel("code")} className="bg-black text-white">
+                Code
+              </button>
             </div>
           </div>
           <div className="my-5     ">
             {panel === "" ? (
-              <div>Choose a level!</div>
+              <div
+                className="    
+                rounded-[10px] 
+                border-[2px] 
+                border-white 
+                my-10
+                bg-black
+                overflow-hidden
+                drop-shadow-[12px_12px_0px_rgba(0,0,0,1)]
+                box-border
+                p-5
+                "
+              >
+                <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Hey!</h3>
+                <p>
+                  If you want to see the process of this component, choose a level below and check
+                  it out! 👆
+                </p>
+              </div>
             ) : panel === "beginner" ? (
               <BegginerLevel />
             ) : panel === "mid-level" ? (
