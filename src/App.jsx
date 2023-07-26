@@ -1061,7 +1061,24 @@ export default function App() {
             This function will be passed as a prop to "Card" component and used in the "onClick"
             attribute.
           </p>
-          <p>At this point your componet just</p>
+          <p>
+            In your parent component where we created our "map", we add a new prop called
+            "handleDelete" and add it to "Card" component.
+          </p>
+          <p>This will be our "handleDelete" function.</p>
+          <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+            <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+              <i className="text-black  ">Snippet 31</i>
+            </div>
+            <hr className="border-white border-[2px]"></hr>
+            <SyntaxHighlighter
+              language="text"
+              customStyle={{ background: "black", color: "white" }}
+              showLineNumbers
+            >
+              {snippet31}
+            </SyntaxHighlighter>
+          </div>
         </div>
       </div>
     </article>
