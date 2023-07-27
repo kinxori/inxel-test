@@ -246,7 +246,7 @@ export default function BegginerLevel() {
   const snippet25 = `
     // We place our 4 variables inside this function
   
-    const personalType = () => {
+    const outputType = () => {
   
        const filteredPersonal = data.filter((item) => {
         return item.type === "personal";
@@ -263,7 +263,7 @@ export default function BegginerLevel() {
     };
     `;
   const snippet26 = `
-    const personalType = () => {
+    const outputType = () => {
   
       // const filteredPersonal = data.filter((item) => {
       //   return item.type === "personal";
@@ -289,7 +289,7 @@ export default function BegginerLevel() {
   
     // Finally we call the function and store its value in a new variable.
   
-    const filtereData = personalType();
+    const filtereData = outputType();
     `;
   const snippet27 = `
     // This is calling the "setContactsFilter" and updating its value to the parameter we receive as "filtered".
@@ -334,18 +334,18 @@ export default function BegginerLevel() {
     </div>
     `;
   const snippet30 = `
-    const handleDelete = (id) => {    // "id" is going to be our unique identifier, in this case this value comes from the "number" of each object
+    const handleRemove = (id) => {    // "id" is going to be our unique identifier, in this case this value comes from the "number" of each object
       setData((prevData) => prevData.filter((card) => card.number !== id));   // Here we update the source data exluding the passed "id"
     };
     `;
   const snippet31 = `
     // Here we pass the whole function as a prop to "Card" component.
   
-    <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+    <Card name={c.name} number={c.number} handleRemove={handleRemove} />
     `;
   const snippet32 = `
     <button
-      onClick={() => props.handleDelete(props.number)}    // We use the "handleDelete" function we receive and pass the "number" of the clicked card
+      onClick={() => props.handleRemove(props.number)}    // We use the "handleRemove" function we receive and pass the "number" of the clicked card
     >
       Remove
     </button>
@@ -983,7 +983,7 @@ export default function BegginerLevel() {
           has been clicked.
         </p>
         <p>Then we need to update our source data with the new array excluding the clicked card.</p>
-        <p>Your "handleDelete" function should look like this:</p>
+        <p>Your "handleRemove" function should look like this:</p>
         <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 30</i>
@@ -1003,9 +1003,9 @@ export default function BegginerLevel() {
         </p>
         <p>
           In your parent component where we created our "map", we add a new prop called
-          "handleDelete" and add it to "Card" component.
+          "handleRemove" and add it to "Card" component.
         </p>
-        <p>This will be our "handleDelete" function.</p>
+        <p>This will be our "handleRemove" function.</p>
         <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
             <i className="text-black  ">Snippet 31</i>

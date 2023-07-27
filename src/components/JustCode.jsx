@@ -40,7 +40,7 @@ export default function JustCode() {
       } else null;
     };
   
-    const handleDelete = (id) => {
+    const handleRemove = (id) => {
       setData((prevData) => prevData.filter((card) => card.number !== id));
     };
   
@@ -105,7 +105,7 @@ export default function JustCode() {
           <div>
             {filtereData?.map((c) => (
               <div key={c.number}>
-                <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+                <Card name={c.name} number={c.number} handleRemove={handleRemove} />
               </div>
             ))}
           </div>
@@ -122,7 +122,7 @@ export default function JustCode() {
         <div>
           <h3>{props.name}</h3>
           <h3>+ {props.number}</h3>
-          <button onClick={() => props.handleDelete(props.number)} >
+          <button onClick={() => props.handleRemove(props.number)} >
             Remove
           </button>
         </div>

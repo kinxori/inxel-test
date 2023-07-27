@@ -50,10 +50,6 @@ export default function InxelTest() {
     } else null;
   };
 
-  const handleDelete = (id) => {
-    setData((prevData) => prevData.filter((card) => card.number !== id));
-  };
-
   const handleToggle = (filtered) => {
     setContactsFilter(filtered);
   };
@@ -62,7 +58,11 @@ export default function InxelTest() {
     setIsSorted(!isSorted);
   };
 
-  const personalType = () => {
+  const handleRemove = (id) => {
+    setData((prevData) => prevData.filter((card) => card.number !== id));
+  };
+
+  const outputType = () => {
     const filteredPersonal = data.filter((item) => {
       return item.type === "personal";
     });
@@ -83,7 +83,7 @@ export default function InxelTest() {
     }
   };
 
-  const filtereData = personalType();
+  const filtereData = outputType();
 
   return (
     <article
@@ -207,7 +207,7 @@ export default function InxelTest() {
         <div className="flex flex-col gap-[5px] overflowY-auto      ">
           {filtereData?.map((c) => (
             <div key={c.number}>
-              <Card name={c.name} number={c.number} handleDelete={handleDelete} />
+              <Card name={c.name} number={c.number} handleRemove={handleRemove} />
             </div>
           ))}
         </div>
@@ -241,7 +241,7 @@ function Card(props) {
         <h3>{props.name}</h3>
         <h3>+ {props.number}</h3>
         <button
-          onClick={() => props.handleDelete(props.number)}
+          onClick={() => props.handleRemove(props.number)}
           className="
         ml-auto
         bg-black

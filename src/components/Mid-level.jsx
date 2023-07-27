@@ -1,5 +1,6 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
+import asset3 from "/src/assets/inxel-test-asset-3.mp4";
 
 export default function MidLevel() {
   const snippet1 = `  
@@ -43,7 +44,7 @@ export default function MidLevel() {
             </div>
           </div>
         );
-      }
+    }
   `;
 
   const snippet3 = `  
@@ -86,42 +87,15 @@ export default function MidLevel() {
 </form>
 `;
 
-  const snippet = `
+  const snippet5 = `
   const [contactsFilter, setContactsFilter] = useState("personal");
   const [isSorted, setIsSorted] = useState(false);
-  const [inputForm, setInputData] = useState({
-    name: "",
-    number: "",
-    type: "personal",
-  });
   const [data, setData] = useState([
     { name: "John", number: "25937", type: "personal" },
     { name: "Peter", number: "29745", type: "personal" },
     { name: "Richard", number: "82832", type: "company" },
     { name: "Fer", number: "32195", type: "company" },
   ]);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setInputData({ ...inputForm, [name]: value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const newEntry = { ...inputForm };
-    if (inputForm.name && inputForm.number !== "") {
-      setData((prevData) => [...prevData, newEntry]);
-      setInputData({
-        name: "",
-        number: "",
-        type: "personal",
-      });
-    } else null;
-  };
-
-  const handleDelete = (id) => {
-    setData((prevData) => prevData.filter((card) => card.number !== id));
-  };
 
   const handleToggle = (filtered) => {
     setContactsFilter(filtered);
@@ -131,7 +105,11 @@ export default function MidLevel() {
     setIsSorted(!isSorted);
   };
 
-  const personalType = () => {
+  const handleRemove = (id) => {
+    setData((prevData) => prevData.filter((card) => card.number !== id));
+  };
+
+  const outputType = () => {
     const filteredPersonal = data.filter((item) => {
       return item.type === "personal";
     });
@@ -152,9 +130,51 @@ export default function MidLevel() {
     }
   };
 
-  const filtereData = personalType();
+  const filtereData = outputType();
   `;
 
+  const snippet6 = `  
+  <div>
+    <button
+        className={ contactsFilter === "personal" ? "activeClass" : "idleClass" }
+        onClick={() => handleToggle("personal")}
+    >
+        Personal
+    </button>
+    <button
+        className={ contactsFilter === "company" ? "activeClass" : "idleClass" }
+        onClick={() => handleToggle("company")}
+    >
+        Company
+    </button>
+    <button
+        className={ isSorted ? "activeClass" : "idleClass" }
+        onClick={handleSorted}
+    >
+        A-Z
+    </button>
+  </div>
+`;
+
+  const snippet7 = `  
+    <div>
+        {filtereData?.map((c) => (
+            <div key={c.number}>
+                <Card name={c.name} number={c.number} handleRemove={handleRemove} />
+            </div>
+        ))}
+    </div>
+`;
+
+  const snippet8 = `  
+  <div>
+    <h3>{props.name}</h3>
+    <h3>+ {props.number}</h3>
+    <button onClick={() => props.handleRemove(props.number)} >
+        Remove
+    </button>
+  </div>
+`;
   return (
     <>
       <div id="step-1" className="flex flex-col gap-2 ">
@@ -197,7 +217,7 @@ export default function MidLevel() {
         <p>It should look similar to this:</p>
         <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-            <i className="text-black  ">Snippet 1</i>
+            <i className="text-black  ">Snippet 2</i>
           </div>
           <hr className="border-white border-[2px]"></hr>
           <SyntaxHighlighter
@@ -251,6 +271,120 @@ export default function MidLevel() {
             {snippet4}
           </SyntaxHighlighter>
         </div>
+        <p>Now we add the logic to the section that will display our Card component.</p>
+        <p>
+          We will also need to create 3 "useState" more. 1 will decide which type of filtered data
+          is rendering, the second one will decide if it's the sorted data or not and the third one
+          will store all the data entries.
+        </p>
+        <p>And as well we will need to create 4 functinos to controll all of this.</p>
+        <ul className="list-disc pl-[30px] flex flex-col gap-2 ">
+          <li>handleToggle</li>
+          <li>handleSorted</li>
+          <li>handleRemove</li>
+          <li>outputType</li>
+        </ul>
+        <p>
+          handleToggle is controlling if the data is either "personal" or "company" type of contact.
+        </p>
+        <p>
+          handleSorted is controlling if the data is sorted or not depending of which type is
+          displayed.
+        </p>
+        <p>
+          handleRemove is controlling the removal of each clicked card inside our Card component.
+        </p>
+        <p>
+          outputType is controlling which variable is going to be displayed as the source for
+          "filteredData".
+        </p>
+        <p>It should look similar to this:</p>
+        <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 5</i>
+          </div>
+          <hr className="border-white border-[2px]"></hr>
+          <SyntaxHighlighter
+            language="text"
+            customStyle={{ background: "black", color: "white" }}
+            showLineNumbers
+          >
+            {snippet5}
+          </SyntaxHighlighter>
+        </div>
+        <p>
+          Let's pass our functions to our Button Tags so they can actually control the conditional
+          rendering.
+        </p>
+        <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 6</i>
+          </div>
+          <hr className="border-white border-[2px]"></hr>
+          <SyntaxHighlighter
+            language="text"
+            customStyle={{ background: "black", color: "white" }}
+            showLineNumbers
+          >
+            {snippet6}
+          </SyntaxHighlighter>
+        </div>
+        <p>
+          Now we will use "map" to display each object inside our data using to structure of Card
+          component.
+        </p>
+        <p>Don't forget to pass the props we need to receive in Card.</p>
+        <ul className="list-disc pl-[30px] flex flex-col gap-2 ">
+          <li>title</li>
+          <li>number</li>
+          <li>handleRemove</li>
+        </ul>
+        <p>In this case we are using our source data from "filtereData" variable.</p>
+        <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 7</i>
+          </div>
+          <hr className="border-white border-[2px]"></hr>
+          <SyntaxHighlighter
+            language="text"
+            customStyle={{ background: "black", color: "white" }}
+            showLineNumbers
+          >
+            {snippet7}
+          </SyntaxHighlighter>
+        </div>
+        <p>
+          Let's adjust the onClick inside our Card component to actually trigger the function
+          "handleRemove".
+        </p>
+        <p>It should look similar to this:</p>
+        <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 8</i>
+          </div>
+          <hr className="border-white border-[2px]"></hr>
+          <SyntaxHighlighter
+            language="text"
+            customStyle={{ background: "black", color: "white" }}
+            showLineNumbers
+          >
+            {snippet8}
+          </SyntaxHighlighter>
+        </div>
+        <p>If everything is correct, your Contact Manager Component should be working right! </p>
+        <div className="rounded-[10px] overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px] my-5  ">
+          <video
+            src={asset3}
+            loop
+            autoPlay
+            controls
+            disablePictureInPicture
+            disableRemotePlayback
+            controlsList="nodownload noremoteplayback noplaybackrate "
+            muted
+          ></video>
+        </div>
+        <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Congrats!</h3>
       </div>
     </>
   );
