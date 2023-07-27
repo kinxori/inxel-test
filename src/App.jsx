@@ -1,5 +1,5 @@
-import InxelTest from "./components/inxel-test";
-import BegginerLevel from "./components/begginer-level";
+import InxelTest from "./components/Inxel-test";
+import BegginerLevel from "./components/Begginer-level";
 import { useState } from "react";
 
 export default function App() {
