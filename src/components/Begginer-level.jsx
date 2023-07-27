@@ -12,7 +12,7 @@ export default function BegginerLevel() {
           <input></input>
           <input></input>
           <select>
-            <option>Person</option>
+            <option>Personal</option>
             <option>Company</option>
           </select>
           <button> Add </button>
@@ -20,7 +20,7 @@ export default function BegginerLevel() {
       </div>
       <div>
         <div>
-          <button> Person </button>
+          <button> Personal </button>
           <button> Company </button>
           <button> A-Z </button>
         </div>
@@ -50,7 +50,7 @@ export default function BegginerLevel() {
       value={null}
       onChange={null}
     >
-      <option value="person">Person</option>
+      <option value="personal">Personal</option>
       <option value="company">Company</option>
     </select>
   `;
@@ -61,7 +61,7 @@ export default function BegginerLevel() {
   `;
   const snippet4 = `
     <button className={null} onClick={null}>
-      Person
+      Personal
     </button>
     <button className={null} onClick={null}>
       Company
@@ -73,10 +73,10 @@ export default function BegginerLevel() {
   const snippet5 = `
     const [data, setData] = useState([
       {
-        name: "John", number: "25937", type: "person",
+        name: "John", number: "25937", type: "personal",
       },
       {
-        name: "Peter", number: "29745", type: "person",
+        name: "Peter", number: "29745", type: "personal",
       },
       {
         name: "Richard", number: "82832", type: "company",
@@ -90,7 +90,7 @@ export default function BegginerLevel() {
     const [inputForm, setInputData] = useState({
       name: "",
       number: "",
-      type: "person",
+      type: "personal",
     });
   `;
   const snippet7 = `
@@ -178,7 +178,7 @@ export default function BegginerLevel() {
         setInputData({
           name: "",
           number: "",
-          type: "person",
+          type: "personal",
         });
       } else null;
     }
@@ -212,10 +212,10 @@ export default function BegginerLevel() {
     }
     `;
   const snippet22 = `
-    // Here we filtering to only have objects with "type = person"
+    // Here we filtering to only have objects with "type = personal"
   
-    const filteredPerson = data.filter((item) => {
-      return item.type === "person";
+    const filteredPersonal = data.filter((item) => {
+      return item.type === "personal";
     });
   
     // Here we filtering to only have objects with "type = company"
@@ -225,9 +225,9 @@ export default function BegginerLevel() {
     });
     `;
   const snippet23 = `
-    // Here we are sorting the filteredPerson variable in alphabetical order.
+    // Here we are sorting the filteredPersonal variable in alphabetical order.
   
-    const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+    const sortedPersonal = [...filteredPersonal].sort((a, b) => a.name.localeCompare(b.name));
   
     // Here we are sorting the filteredCompany variable in alphabetical order.
   
@@ -235,9 +235,9 @@ export default function BegginerLevel() {
   
     `;
   const snippet24 = `
-    // This will have "person" as string as the first value.
+    // This will have "personal" as string as the first value.
   
-    const [contactsFilter, setContactsFilter] = useState("person");
+    const [contactsFilter, setContactsFilter] = useState("personal");
   
     // This will have "false" as booleand as the first value.
   
@@ -246,42 +246,42 @@ export default function BegginerLevel() {
   const snippet25 = `
     // We place our 4 variables inside this function
   
-    const personType = () => {
+    const personalType = () => {
   
-       const filteredPerson = data.filter((item) => {
-        return item.type === "person";
+       const filteredPersonal = data.filter((item) => {
+        return item.type === "personal";
        });
   
       const filteredCompany = data.filter((item) => {
         return item.type === "company";
       });
   
-      const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+      const sortedPersonal = [...filteredPersonal].sort((a, b) => a.name.localeCompare(b.name));
   
       const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
   
     };
     `;
   const snippet26 = `
-    const personType = () => {
+    const personalType = () => {
   
-      // const filteredPerson = data.filter((item) => {
-      //   return item.type === "person";
+      // const filteredPersonal = data.filter((item) => {
+      //   return item.type === "personal";
       // });
       // const filteredCompany = data.filter((item) => {
       //   return item.type === "company";
       // });
-     // const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+     // const sortedPersonal = [...filteredPersonal].sort((a, b) => a.name.localeCompare(b.name));
      // const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
   
     // Here we ask which of our 4 options will be returned. Only 1 will be returned based on our 2 "useState" we created recently.
   
-      if (contactsFilter === "person" && !isSorted) {
-        return filteredPerson;
+      if (contactsFilter === "personal" && !isSorted) {
+        return filteredPersonal;
       } else if (contactsFilter === "company" && !isSorted) {
         return filteredCompany;
-      } else if (contactsFilter === "person" && isSorted) {
-        return sortedPerson;
+      } else if (contactsFilter === "personal" && isSorted) {
+        return sortedPersonal;
       } else if (contactsFilter === "company" && isSorted) {
         return sortedCompany;
       }
@@ -289,7 +289,7 @@ export default function BegginerLevel() {
   
     // Finally we call the function and store its value in a new variable.
   
-    const filtereData = personType();
+    const filtereData = personalType();
     `;
   const snippet27 = `
     // This is calling the "setContactsFilter" and updating its value to the parameter we receive as "filtered".
@@ -306,13 +306,13 @@ export default function BegginerLevel() {
     `;
   const snippet28 = `
     <button
-      className={contactsFilter === "person" ? "activeClass" : "idleClass"}   // We use the value in "contactFilter" to toggle between classes
-      onClick={() => handleToggle("person")}    // We use an anonymus function to pass the value we are waiting in "handleToggle"
+      className={contactsFilter === "personal" ? "activeClass" : "idleClass"}   // We use the value in "contactFilter" to toggle between classes
+      onClick={() => handleToggle("personal")}    // We use an anonymus function to pass the value we are waiting in "handleToggle"
     >
-      Person
+      Personal
     </button>
     <button 
-      className={contactsCompany === "person" ? "activeClass" : "idleClass"}   // We use the value in "contactFilter" to toggle between classes
+      className={contactsCompany === "personal" ? "activeClass" : "idleClass"}   // We use the value in "contactFilter" to toggle between classes
      onClick={() => handleToggle("company")}    // We use an anonymus function to pass the value we are waiting in "handleToggle"
    >
       Company
@@ -413,7 +413,7 @@ export default function BegginerLevel() {
         </div>
         <p>
           After that we keep adding attributes now to the buttons that are going to toggle the
-          "Person and Company" lists, as well as the "A-Z" button.
+          "Personal and Company" lists, as well as the "A-Z" button.
         </p>
         <p>
           We add the "&#123; &#125;" to the className because we need to make the styles dynamic:
@@ -465,7 +465,7 @@ export default function BegginerLevel() {
         </p>
         <p>
           Notice how we add the "name" as empty as well as the "number". But the "type" is already
-          filled. This is because the value of the Input Tags will be empty at first, but "person"
+          filled. This is because the value of the Input Tags will be empty at first, but "personal"
           will be the default value at the start.
         </p>
         <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
@@ -742,7 +742,7 @@ export default function BegginerLevel() {
         </p>
         <p>
           We are missing the logic to display our new entries as cards. We are missing the filter to
-          select "person" or "company" and "A-Z" sort buttons. As well as the "Delete" inside each
+          select "personal" or "company" and "A-Z" sort buttons. As well as the "Delete" inside each
           card.
         </p>
       </div>
@@ -798,12 +798,12 @@ export default function BegginerLevel() {
         <p>But first...!</p>
         <p>We need to start with the filtering of the data.</p>
         <p>
-          Each object has a key-value called "type", this is where we can filter them by "person" or
-          "company".
+          Each object has a key-value called "type", this is where we can filter them by "personal"
+          or "company".
         </p>
         <p>
           For this project we are going to create 2 new variables that will store each object with
-          "person" or "company" types only.
+          "personal" or "company" types only.
         </p>
         <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -845,13 +845,13 @@ export default function BegginerLevel() {
           options will be rendered.
         </p>
         <ul className="list-disc pl-[30px] flex flex-col gap-2 ">
-          <li>Filtered Person Contact</li>
-          <li>Sorted Person Contact</li>
+          <li>Filtered Personal Contact</li>
+          <li>Sorted Personal Contact</li>
           <li>Filtered Company Contact</li>
           <li>Sorted Company Contact</li>
         </ul>
-        <p>1 will choose to render "person" and the other "company".</p>
-        <p>2 will choose to render "person filtered" or "company filtered".</p>
+        <p>1 will choose to render "personal" and the other "company".</p>
+        <p>2 will choose to render "personal filtered" or "company filtered".</p>
         <p>For that these "useState" will look like this:</p>
         <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
@@ -901,7 +901,7 @@ export default function BegginerLevel() {
         </div>
         <p>By this point we are really close to finish this project.</p>
         <p>
-          Let's start creating the functions to handle the toggle between "person" and "company".
+          Let's start creating the functions to handle the toggle between "personal" and "company".
         </p>
         <p>Then we can create the function to toggle between "sorted" or the original variable.</p>
         <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">

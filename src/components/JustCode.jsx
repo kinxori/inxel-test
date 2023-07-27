@@ -82,7 +82,7 @@ export default function JustCode() {
             <input required={true} autoComplete="off" name="name" value={inputForm.name} onChange={handleChange} placeholder="name" type="text" ></input>
             <input required name="number" value={inputForm.number} onChange={handleChange} placeholder="number" type="text" ></input>
             <select name="type" value={inputForm.type} onChange={handleChange} >
-              <option value="personal" >Person</option>
+              <option value="personal" >Personal</option>
               <option value="company" >Company</option>
             </select>
             <button onClick={handleSubmit} type="submit" >

@@ -69,7 +69,7 @@ export default function InxelTest() {
     const filteredCompany = data.filter((item) => {
       return item.type === "company";
     });
-    const sortedPerson = [...filteredPersonal].sort((a, b) => a.name.localeCompare(b.name));
+    const sortedPersonal = [...filteredPersonal].sort((a, b) => a.name.localeCompare(b.name));
     const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
 
     if (contactsFilter === "personal" && !isSorted) {
@@ -77,7 +77,7 @@ export default function InxelTest() {
     } else if (contactsFilter === "company" && !isSorted) {
       return filteredCompany;
     } else if (contactsFilter === "personal" && isSorted) {
-      return sortedPerson;
+      return sortedPersonal;
     } else if (contactsFilter === "company" && isSorted) {
       return sortedCompany;
     }
