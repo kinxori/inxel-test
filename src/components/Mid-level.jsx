@@ -177,7 +177,7 @@ export default function MidLevel() {
 `;
   return (
     <>
-      <div id="step-1" className="flex flex-col gap-2 ">
+      <div id="step-1-mid-level" className="flex flex-col gap-2 ">
         <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Step #1:</h3>
         <p>
           The first step is to create all the JSX/HTML structure. For both parent and child
@@ -229,7 +229,7 @@ export default function MidLevel() {
           </SyntaxHighlighter>
         </div>
       </div>
-      <div id="step-2" className="flex flex-col gap-2 ">
+      <div id="step-2-mid-level" className="flex flex-col gap-2 ">
         <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Step #2:</h3>
         <p>Then we create the logic for the parent component.</p>
         <p>Let's start with the "useState" and the functions to handle the Form.</p>
@@ -329,6 +329,10 @@ export default function MidLevel() {
             {snippet6}
           </SyntaxHighlighter>
         </div>
+      </div>
+      <div id="step-3-mid-level" className="flex flex-col gap-2 ">
+        <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Step #3</h3>
+
         <p>
           Now we will use "map" to display each object inside our data using to structure of Card
           component.
