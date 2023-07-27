@@ -24,7 +24,7 @@ export default function BegginerLevel() {
           <button> Company </button>
           <button> A-Z </button>
         </div>
-        <div> <CardComponent...> </div>
+        <div> <Card/> </div>
       </div>
     </article>
   `;
