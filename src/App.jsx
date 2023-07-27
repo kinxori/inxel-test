@@ -29,11 +29,11 @@ export default function App() {
           This is running in a local enviorment with hard-coded data. This was a project requirment
           but you can fetch any API to add real data.
         </p>
+        <i>*This component doesn't include styles</i>
         <div className="rounded-[10px] border-[2px] border-white my-5 bg-black overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] box-border p-[15px] flex flex-col gap-2 ">
           <h3 className="text-[24px] underline leading-[24px] font-bold ">Hey!</h3>
           <p>
-            If you want to see the process of this component, choose a level below and check it out!
-            👇
+            If you want to see the code of this component, choose a level below and check it out! 👇
           </p>
         </div>
         <div className="flex flex-col justify-center items-center w-[100%] mt-5 mb-20 mx-auto">
