@@ -46,7 +46,47 @@ export default function MidLevel() {
       }
   `;
 
-  const snippet3 = `
+  const snippet3 = `  
+  const [inputForm, setInputData] = useState({
+    name: "",
+    number: "",
+    type: "personal",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setInputData({ ...inputForm, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newEntry = { ...inputForm };
+    if (inputForm.name && inputForm.number !== "") {
+      setData((prevData) => [...prevData, newEntry]);
+      setInputData({
+        name: "",
+        number: "",
+        type: "personal",
+      });
+    } else null;
+  };
+`;
+
+  const snippet4 = `  
+<form>
+    <input required={true} autoComplete="off" name="name" value={inputForm.name} onChange={handleChange} placeholder="name" type="text" ></input>
+    <input required name="number" value={inputForm.number} onChange={handleChange} placeholder="number" type="text" ></input>
+    <select name="type" value={inputForm.type} onChange={handleChange} >
+        <option value="personal">Personal</option>
+        <option value="company">Company</option>
+    </select>
+    <button onClick={handleSubmit} type="submit" >
+        Add Contact
+    </button>
+</form>
+`;
+
+  const snippet = `
   const [contactsFilter, setContactsFilter] = useState("personal");
   const [isSorted, setIsSorted] = useState(false);
   const [inputForm, setInputData] = useState({
@@ -168,12 +208,21 @@ export default function MidLevel() {
             {snippet2}
           </SyntaxHighlighter>
         </div>
+      </div>
+      <div id="step-2" className="flex flex-col gap-2 ">
         <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">Step #2:</h3>
         <p>Then we create the logic for the parent component.</p>
+        <p>Let's start with the "useState" and the functions to handle the Form.</p>
+        <p>For this, we will need 2 functions:</p>
+        <ul className="list-disc pl-[30px] flex flex-col gap-2 ">
+          <li>handleChange</li>
+          <li>handleSubmit</li>
+        </ul>
+        <p>Here we will store our data entry from the Form.</p>
         <p>It should look similar to this:</p>
         <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
           <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-            <i className="text-black  ">Snippet 2</i>
+            <i className="text-black  ">Snippet 3</i>
           </div>
           <hr className="border-white border-[2px]"></hr>
           <SyntaxHighlighter
@@ -181,7 +230,25 @@ export default function MidLevel() {
             customStyle={{ background: "black", color: "white" }}
             showLineNumbers
           >
-            {snippet1}
+            {snippet3}
+          </SyntaxHighlighter>
+        </div>
+        <p>
+          Then we will use those functions in our Form and add the corresponding attributes to each
+          Tag.
+        </p>
+        <p>It should look similar to this:</p>
+        <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Snippet 4</i>
+          </div>
+          <hr className="border-white border-[2px]"></hr>
+          <SyntaxHighlighter
+            language="text"
+            customStyle={{ background: "black", color: "white" }}
+            showLineNumbers
+          >
+            {snippet4}
           </SyntaxHighlighter>
         </div>
       </div>
