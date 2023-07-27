@@ -1,5 +1,6 @@
 import InxelTest from "./components/Inxel-test";
 import BegginerLevel from "./components/Begginer-level";
+import JustCode from "./components/JustCode";
 import { useState } from "react";
 
 export default function App() {
@@ -73,7 +74,7 @@ export default function App() {
             ) : panel === "mid-level" ? (
               <div> Intermediate </div>
             ) : (
-              panel === "code" && <div>Just code </div>
+              panel === "code" && <JustCode />
             )}
           </div>
         </div>

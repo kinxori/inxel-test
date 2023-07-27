@@ -1,24 +1,24 @@
 import React from "react";
 import { useState } from "react";
 
-function InxelTest() {
-  const [contactsFilter, setContactsFilter] = useState("person");
+export default function InxelTest() {
+  const [contactsFilter, setContactsFilter] = useState("personal");
   const [isSorted, setIsSorted] = useState(false);
   const [inputForm, setInputData] = useState({
     name: "",
     number: "",
-    type: "person",
+    type: "personal",
   });
   const [data, setData] = useState([
     {
       name: "John",
       number: "25937",
-      type: "person",
+      type: "personal",
     },
     {
       name: "Peter",
       number: "29745",
-      type: "person",
+      type: "personal",
     },
     {
       name: "Richard",
@@ -45,7 +45,7 @@ function InxelTest() {
       setInputData({
         name: "",
         number: "",
-        type: "person",
+        type: "personal",
       });
     } else null;
   };
@@ -62,28 +62,28 @@ function InxelTest() {
     setIsSorted(!isSorted);
   };
 
-  const personType = () => {
-    const filteredPerson = data.filter((item) => {
-      return item.type === "person";
+  const personalType = () => {
+    const filteredPersonal = data.filter((item) => {
+      return item.type === "personal";
     });
     const filteredCompany = data.filter((item) => {
       return item.type === "company";
     });
-    const sortedPerson = [...filteredPerson].sort((a, b) => a.name.localeCompare(b.name));
+    const sortedPerson = [...filteredPersonal].sort((a, b) => a.name.localeCompare(b.name));
     const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
 
-    if (contactsFilter === "person" && !isSorted) {
-      return filteredPerson;
+    if (contactsFilter === "personal" && !isSorted) {
+      return filteredPersonal;
     } else if (contactsFilter === "company" && !isSorted) {
       return filteredCompany;
-    } else if (contactsFilter === "person" && isSorted) {
+    } else if (contactsFilter === "personal" && isSorted) {
       return sortedPerson;
     } else if (contactsFilter === "company" && isSorted) {
       return sortedCompany;
     }
   };
 
-  const filtereData = personType();
+  const filtereData = personalType();
 
   return (
     <article
@@ -150,7 +150,7 @@ function InxelTest() {
             text-black
             "
           >
-            <option value="person">Person</option>
+            <option value="personal">Personal</option>
             <option value="company">Company</option>
           </select>
           <button
@@ -183,11 +183,11 @@ function InxelTest() {
         <div className=" flex gap-[5px] h-[40px] justify-around  ">
           <button
             className={
-              contactsFilter === "person" ? " bg-white text-black " : "bg-black text-white"
+              contactsFilter === "personal" ? " bg-white text-black " : "bg-black text-white"
             }
-            onClick={() => handleToggle("person")}
+            onClick={() => handleToggle("personal")}
           >
-            Person
+            Personal
           </button>
           <button
             className={
@@ -215,8 +215,6 @@ function InxelTest() {
     </article>
   );
 }
-
-export default InxelTest;
 
 function Card(props) {
   return (
