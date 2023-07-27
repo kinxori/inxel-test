@@ -8,16 +8,16 @@ export default function JustCode() {
   
   export default function InxelTest() {
 
-    const [contactsFilter, setContactsFilter] = useState("personal");
+    const [contactsFilter, setContactsFilter] = useState("personalal");
     const [isSorted, setIsSorted] = useState(false);
     const [inputForm, setInputData] = useState({
       name: "",
       number: "",
-      type: "personal",
+      type: "personalal",
     });
     const [data, setData] = useState([
-        { name: "John", number: "25937", type: "personal" },
-        { name: "Peter", number: "29745", type: "personal" },
+        { name: "John", number: "25937", type: "personalal" },
+        { name: "Peter", number: "29745", type: "personalal" },
         { name: "Richard", number: "82832", type: "company" },
         { name: "Fer", number: "32195", type: "company", },
     ]);
@@ -35,7 +35,7 @@ export default function JustCode() {
         setInputData({
           name: "",
           number: "",
-          type: "personal",
+          type: "personalal",
         });
       } else null;
     };
@@ -52,28 +52,28 @@ export default function JustCode() {
       setIsSorted(!isSorted);
     };
   
-    const personalType = () => {
-      const filteredPersonal = data.filter((item) => {
-        return item.type === "personal";
+    const personalalType = () => {
+      const filteredPersonalal = data.filter((item) => {
+        return item.type === "personalal";
       });
       const filteredCompany = data.filter((item) => {
         return item.type === "company";
       });
-      const sortedPersonal = [...filteredPersonal].sort((a, b) => a.name.localeCompare(b.name));
+      const sortedPersonalal = [...filteredPersonalal].sort((a, b) => a.name.localeCompare(b.name));
       const sortedCompany = [...filteredCompany].sort((a, b) => a.name.localeCompare(b.name));
   
-      if (contactsFilter === "personal" && !isSorted) {
-        return filteredPersonal;
+      if (contactsFilter === "personalal" && !isSorted) {
+        return filteredPersonalal;
       } else if (contactsFilter === "company" && !isSorted) {
         return filteredCompany;
-      } else if (contactsFilter === "personal" && isSorted) {
-        return sortedPersonal;
+      } else if (contactsFilter === "personalal" && isSorted) {
+        return sortedPersonalal;
       } else if (contactsFilter === "company" && isSorted) {
         return sortedCompany;
       }
     };
   
-    const filtereData = personalType();
+    const filtereData = personalalType();
   
     return (
       <article>
@@ -82,7 +82,7 @@ export default function JustCode() {
             <input required={true} autoComplete="off" name="name" value={inputForm.name} onChange={handleChange} placeholder="name" type="text" ></input>
             <input required name="number" value={inputForm.number} onChange={handleChange} placeholder="number" type="text" ></input>
             <select name="type" value={inputForm.type} onChange={handleChange} >
-              <option value="personal" >Personal</option>
+              <option value="personalal" >Personal</option>
               <option value="company" >Company</option>
             </select>
             <button onClick={handleSubmit} type="submit" >
@@ -92,8 +92,8 @@ export default function JustCode() {
         </div>
         <div>
           <div>
-            <button className={ contactsFilter === "personal" ? "activeClass" : "idleClass" } onClick={() => handleToggle("personal")} >
-              Personal
+            <button className={ contactsFilter === "personalal" ? "activeClass" : "idleClass" } onClick={() => handleToggle("personalal")} >
+              Personalal
             </button>
             <button className={ contactsFilter === "company" ? "activeClass" : "idleClass" } onClick={() => handleToggle("company")} >
               Company
@@ -132,33 +132,35 @@ export default function JustCode() {
   `;
 
   return (
-    <article className="flex flex-col gap-2 ">
-      <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
-        <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-          <i className="text-black  ">Parent Component</i>
+    <>
+      <div className="flex flex-col gap-2 ">
+        <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Parent Component</i>
+          </div>
+          <hr className="border-black border-[2px]"></hr>
+          <SyntaxHighlighter
+            language="text"
+            customStyle={{ background: "black", color: "white" }}
+            showLineNumbers
+          >
+            {parentComponent}
+          </SyntaxHighlighter>
         </div>
-        <hr className="border-black border-[2px]"></hr>
-        <SyntaxHighlighter
-          language="text"
-          customStyle={{ background: "black", color: "white" }}
-          showLineNumbers
-        >
-          {parentComponent}
-        </SyntaxHighlighter>
-      </div>
-      <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
-        <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
-          <i className="text-black  ">Child Component</i>
+        <div className="rounded-[10px] my-5 overflow-hidden drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] border-white border-[2px]   ">
+          <div className="w-[100%] h-[30px] bg-white flex items-center pl-[10px]   ">
+            <i className="text-black  ">Child Component</i>
+          </div>
+          <hr className="border-black border-[2px]"></hr>
+          <SyntaxHighlighter
+            language="text"
+            customStyle={{ background: "black", color: "white" }}
+            showLineNumbers
+          >
+            {childComponent}
+          </SyntaxHighlighter>
         </div>
-        <hr className="border-black border-[2px]"></hr>
-        <SyntaxHighlighter
-          language="text"
-          customStyle={{ background: "black", color: "white" }}
-          showLineNumbers
-        >
-          {childComponent}
-        </SyntaxHighlighter>
       </div>
-    </article>
+    </>
   );
 }
