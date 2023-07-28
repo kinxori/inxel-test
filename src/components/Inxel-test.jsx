@@ -102,6 +102,7 @@ export default function InxelTest() {
         className="
         box-border
         p-[10px]
+        ts:p-[20px]
         "
       >
         <form className="flex flex-col gap-[5px]   ">
@@ -173,6 +174,7 @@ export default function InxelTest() {
         h-[300px]
         box-border
         p-[10px]
+        ts:p-[20px]
         flex
         flex-col
         overflow-auto
@@ -180,7 +182,7 @@ export default function InxelTest() {
        
         "
       >
-        <div className=" flex gap-[5px] h-[40px] justify-around  ">
+        <div className="w-[100%] flex gap-[5px] h-[40px] justify-around ">
           <button
             className={
               contactsFilter === "personal" ? " bg-white text-black " : "bg-black text-white"
@@ -199,7 +201,9 @@ export default function InxelTest() {
           </button>
           <button
             onClick={handleSorted}
-            className={isSorted ? " bg-white text-black  " : " bg-black text-white "}
+            className={
+              isSorted ? " bg-white text-black   ts:ml-auto " : " bg-black text-white  ts:ml-auto "
+            }
           >
             A-Z
           </button>
