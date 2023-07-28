@@ -9,7 +9,7 @@ export default function App() {
   const [panel, setPanel] = useState("");
 
   return (
-    <article className="w-[80%] mx-auto mt-20 font-[Rubik] ts:w-[70%] ds:w-[60%] ">
+    <article className="w-[80%] mx-auto mt-20 font-[Rubik] ts:w-[70%] ds:w-[50%] ">
       <ScrollTopButton />
       <div className=" flex flex-col">
         <h1 className=" text-[54px] font-bold underline   ">Hey There!</h1>
