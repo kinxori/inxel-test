@@ -17,7 +17,7 @@ export default function App() {
           Welcome to this repository.
         </h3>
         <p className="font-sans leading-[18px]    ">
-          Here you can have a look on 1 technical challenge I completed for Inxel. You can have a
+          Here you can have a look on 1 technical challenge I completed for one company. You can have a
           clear step by step view through the whole process to create this Contact Manager.
         </p>
       </div>
