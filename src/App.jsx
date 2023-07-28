@@ -2,6 +2,7 @@ import InxelTest from "./components/Inxel-test";
 import BegginerLevel from "./components/Begginer-level";
 import JustCode from "./components/JustCode";
 import MidLevel from "./components/Mid-level";
+import ScrollTopButton from "./components/scrollTopButton";
 import { useState } from "react";
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
 
   return (
     <article className="w-[80%] mx-auto mt-20 font-[Rubik] ts:w-[70%] ds:w-[60%] ">
+      <ScrollTopButton />
       <div className=" flex flex-col">
         <h1 className=" text-[54px] font-bold underline   ">Hey There!</h1>
         <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">
