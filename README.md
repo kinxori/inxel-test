@@ -53,6 +53,6 @@ If you visit the live repo, you are free to use the code of the Contact Manager 
 
 Let's connect and let's grow this community with devs all around the world. Don't forget to say hello! 👇
 
-[![GitHub Page](https://toppng.com/uploads/thumbnail/github-mark-logo-vector-11573976116oq3oau9n10.png)](https://github.com/kinxori/)
+[![GitHub Page](/readme-files/github-white-logo.png)](https://github.com/kinxori/)
 [![LinkedIn](https://toppng.com/public/uploads/thumbnail/linkedin-color-icon-linkedin-logo-round-11562920732wikdvo5nes.png)](https://linkedin.com/in/quinchori)
 [![Tiwtter](https://toppng.com/public/uploads/thumbnail/circle-twitter-logo-png-11536001225lw5rbel15n.png)](https://twitter.com/kinxori)
