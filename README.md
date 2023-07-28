@@ -4,7 +4,7 @@ Here you can have a look of 1 technical challenge I completed for one company. Y
 clear step by step view through the whole process to create this Contact Manager. 
 The current code will be inside the Live Project, make sure to visit the live repo. 💻
 
-![Video of the Contact Manager in use](/src/assets/inxel-test-asset-3.mp4)
+![Video of the Contact Manager in use](/readme-files/contact-manager-use.gif)
 
 ## Table of Contents
 
