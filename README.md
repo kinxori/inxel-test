@@ -8,7 +8,7 @@ The current code will be inside the Live Project, make sure to visit the live re
 
 ## Table of Contents
 
-- [Live Project](#live)
+- [Live Project](#live-project)
 - [Description](#description)
 - [Technologies Used](#technologies-used)
 - [License](#license)
