@@ -1,4 +1,4 @@
-import InxelTest from "./components/Inxel-test";
+import ContactManagerTest from "./components/ContactManagerTest";
 import BegginerLevel from "./components/Begginer-level";
 import JustCode from "./components/JustCode";
 import MidLevel from "./components/Mid-level";
@@ -22,7 +22,7 @@ export default function App() {
             have a clear step by step view through the whole process to create this Contact Manager.
           </p>
         </div>
-        <InxelTest />
+        <ContactManagerTest />
       </div>
       <article className="flex flex-col mx-auto border-box p-[10%] ts:p-[5%] gap-3 ts:w-[70%] ds:w-[60%]">
         <p>
@@ -34,7 +34,7 @@ export default function App() {
           <p>
             If you want to see the code of this component, choose a level below and check it out! 👇
           </p>
-          <i className="text-[12px]  ">*This component doesn't include styles</i>
+          <i className="text-[12px] ">*This component doesn't include styles</i>
         </div>
         <div className="flex flex-col justify-center items-center w-[100%] mt-5 mb-20 mx-auto">
           <div className="flex gap-1 justify-evenly ">

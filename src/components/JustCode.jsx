@@ -6,7 +6,7 @@ export default function JustCode() {
   import React from "react";
   import { useState } from "react";
   
-  export default function InxelTest() {
+  export default function ContactManager() {
 
     const [contactsFilter, setContactsFilter] = useState("personalal");
     const [isSorted, setIsSorted] = useState(false);
