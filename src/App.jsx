@@ -9,11 +9,11 @@ export default function App() {
   const [panel, setPanel] = useState("");
 
   return (
-    <section className=" mx-auto border-box p-10 font-[rubik]  ">
+    <section className=" mx-auto font-[rubik]  ">
       <ScrollTopButton />
-      <div className="ds:h-[100vh] flex flex-col ds:flex-row ds:justify-evenly ds:items-center">
-        <div className=" flex flex-col ds:w-[35%]">
-          <h1 className=" text-[54px] font-bold underline   ">Hey There!</h1>
+      <div className="border-box p-10 flex flex-col ds:p-20 ds:h-[100vh] ds:gap-10 ds:flex-row ds:justify-evenly ds:items-center">
+        <div className=" flex flex-col ds:w-[100%]">
+          <h1 className=" text-[54px] font-bold underline ds:text-[90px]   ">Hey There!</h1>
           <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">
             Welcome to this repository.
           </h3>
@@ -24,7 +24,7 @@ export default function App() {
         </div>
         <InxelTest />
       </div>
-      <article className="flex flex-col border-box p-10 gap-3 w-[80%] ts:w-[70%] ds:w-[60%]">
+      <article className="flex flex-col mx-auto border-box p-10 gap-3 w-[80%] ts:w-[70%] ds:w-[60%]">
         <p>
           This is running in a local enviorment with hard-coded data. This was a project requirment
           but you can fetch any API to add real data.

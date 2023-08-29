@@ -96,6 +96,7 @@ export default function InxelTest() {
     bg-black
     overflow-hidden
     drop-shadow-[12px_12px_0px_rgba(0,0,0,1)] 
+    w-[100%]
     "
     >
       <div
