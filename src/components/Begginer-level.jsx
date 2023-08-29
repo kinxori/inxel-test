@@ -1,8 +1,8 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import asset1 from "/src/assets/inxel-test-asset-1.mp4";
-import asset2 from "/src/assets/inxel-test-asset-2.mp4";
-import asset3 from "/src/assets/inxel-test-asset-3.mp4";
+import asset1 from "/src/assets/contact-manager-test-asset-1.mp4";
+import asset2 from "/src/assets/contact-manager-test-asset-2.mp4";
+import asset3 from "/src/assets/contact-manager-test-asset-3.mp4";
 
 export default function BegginerLevel() {
   const snippet1 = `  
