@@ -14,7 +14,7 @@ export default function App() {
       <div className="border-box p-[10%] flex flex-col mx-auto ts:w-[70%] ds:w-[100%] ts:p-[5%] ds:p-[10%] ds:h-[100vh] ds:gap-[10%] ds:flex-row ds:justify-center ds:items-center">
         <div className=" flex flex-col ds:w-[100%]">
           <h1 className=" text-[54px] font-bold underline ds:text-[90px]   ">Hey There!</h1>
-          <h3 className="text-[24px] underline leading-[24px] font-bold my-5  ">
+          <h3 className="text-[24px] leading-[24px] font-bold my-5 ">
             Welcome to this repository.
           </h3>
           <p className="font-sans leading-[18px] ds:w-[90%] text-justify  ">
