@@ -4,13 +4,15 @@ import JustCode from "./components/JustCode";
 import MidLevel from "./components/Mid-level";
 import ScrollTopButton from "./components/scrollTopButton";
 import { useState } from "react";
+import bgImg from "/src/assets/kinxori-background-for-assets-template.png";
 
 export default function App() {
   const [panel, setPanel] = useState("");
 
   return (
-    <section className="font-[rubik]  ">
+    <section className="font-[rubik]">
       <ScrollTopButton />
+      <img src={bgImg} className="fixed z-[-1000] w-screen h-screen object-cover " />
       <div className="border-box p-[10%] flex flex-col mx-auto ts:w-[70%] ds:w-[100%] ts:p-[5%] ds:p-[10%] ds:h-[100vh] ds:gap-[10%] ds:flex-row ds:justify-center ds:items-center">
         <div className=" flex flex-col ds:w-[100%]">
           <h1 className=" text-[54px] font-bold underline ds:text-[90px]   ">Hey There!</h1>
@@ -18,8 +20,8 @@ export default function App() {
             Welcome to this repository.
           </h3>
           <p className="font-sans leading-[18px] ds:w-[90%] text-justify  ">
-            Here you can have a look on 1 technical challenge I completed for one company. You can
-            have a clear step by step view through the whole process to create this Contact Manager.
+            Here you can have a look on 1 technical challenge I completed. You can have a clear step
+            by step view through the whole process to create this Contact Manager.
           </p>
         </div>
         <ContactManagerTest />

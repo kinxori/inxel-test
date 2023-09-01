@@ -6,23 +6,25 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
-  height: 100vh;
+  /* height: 100vh;
   background: hsla(289, 83%, 36%, 1);
-  background: radial-gradient(circle, hsla(289, 83%, 26%, 1) 0%, hsla(0, 0%, 0%, 1) 150%);
+  background: radial-gradient(circle, hsla(289, 83%, 26%, 1) 0%, hsla(0, 0%, 0%, 1) 150%); */
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid white;
   padding: 0.6em 1em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 button:hover {
-  border-color: white;
+  color: #1a1a1a;
+  background: white;
 }
 * {
   margin: 0;
