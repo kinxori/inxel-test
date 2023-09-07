@@ -39,8 +39,7 @@ export default function ScrollTopButton() {
           w-[50px] 
           h-[50px] 
           text-black 
-          rotate-[-90deg] 
-          rounded-[50%] 
+              rounded-[50%] 
           bg-white 
           text-[30px] 
           border-black 
@@ -57,7 +56,7 @@ export default function ScrollTopButton() {
           "
           onClick={handleClick}
         >
-          &#10145;
+          <i className="fa-solid fa-arrow-up"></i>
         </button>
       </div>
     </>
